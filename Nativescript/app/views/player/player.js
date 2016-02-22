@@ -53,7 +53,14 @@ exports.pageLoaded = function(args) {
             if (intervalCount % 5 == 0) {
                 var nextElemId = 'dol_1_15_zujc_'+ bookProgressId++;
                 console.log('WebView.smoothScroll: #' + nextElemId);
-                webView.url = `javascript:smoothScroll.animateScroll('#${nextElemId}');`;
+                var javascriptContent = `smoothScroll.animateScroll('#${nextElemId}');`
+
+                if (webView.ios) {
+                    webView.ios.stringByEvaluatingJavaScriptFromString(javascriptContent);
+                } else {
+                    webView.url = `javascript:${javascriptContent}`;
+                }
+
             }
             ++intervalCount;
         }
