@@ -1,0 +1,30 @@
+<Page loaded="pageLoaded">
+    <Page.actionBar>
+        <ActionBar title="LYT3 Prototype" android.icon="res://is_custom_home_icon" android.iconVisibility="always">
+            <!--
+            <NavigationButton text="Back" android.systemIcon = "ic_menu_back"/>
+            <ActionItem text="Back" ios.position="right"  android.position="popup"/>
+            -->
+        </ActionBar>
+    </Page.actionBar>
+    <StackLayout orientation="vertical">
+
+      <Image id="logo" src="http://plugins.telerik.com/images/default-source/Logos/ns-logo.png" stretch="aspectFit" horizontalAlignment="center" />
+      <Label id="logoText" text="~Nativescript~" horizontalAlignment="center" />
+
+      <GridLayout columns="*, *, *, *" rows="auto" >
+          <Button text="Play" tap="playPause" col="0" />
+          <Button text="Seek" tap="seekForward" col="1" />
+          <Button text="x2" tap="toggleRate" col="2" id="rate-btn" />
+          <Button text="Stop" tap="stop" col="3" />
+      </GridLayout>
+      <Label text="{{ playedText }}" />
+
+      <Slider id="my-slider" value="{{ progress }}" />
+      
+      <GridLayout columns="*" rows="*, 5">
+        <WebView id="my-webview" src="~/www/static.html" />
+        <Progress id="progress" value="{{ progress }}" row="1"/>
+      </GridLayout>
+    </StackLayout>
+</Page>
