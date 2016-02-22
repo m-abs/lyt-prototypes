@@ -7,7 +7,7 @@ var webViewModule = require("ui/web-view");
 var Observable = require("data/observable").Observable;
 var timer = require("timer");
 
-var Sound = require('../../mysound/sound');
+var Sound = require('../../sound/sound');
 
 var page, slider, webView, playerModel;
 var mySound, isSeeking = false, bookProgressId = 1000, intervalId, intervalCount = 0;
