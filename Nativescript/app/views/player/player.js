@@ -100,7 +100,7 @@ exports.stop = function(args) {
 exports.toggleRate = function() {
     if (mySound) {
         if (mySound.rate != 1) {
-            if (mySound.setRate(1.5)) {
+            if (mySound.setRate(2)) {
                 page.getViewById('rate-btn').style.backgroundColor = new Color('Green');
             }
         } else {
