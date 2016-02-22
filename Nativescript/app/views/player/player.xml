@@ -21,7 +21,7 @@
       <Label text="{{ playedText }}" />
 
       <Slider id="my-slider" value="{{ progress }}" />
-      
+
       <GridLayout columns="*" rows="*, 5">
         <WebView id="my-webview" src="~/www/static.html" />
         <Progress id="progress" value="{{ progress }}" row="1"/>

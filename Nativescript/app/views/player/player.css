@@ -5,3 +5,6 @@
   margin: 0;
   font-size: 14;
 }
+#rate-btn {
+  background-color: 'red';
+}

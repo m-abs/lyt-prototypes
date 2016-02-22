@@ -4,8 +4,8 @@ var Sound = (function (_super) {
     __extends(Sound, _super);
     function Sound() {
         _super.apply(this, arguments);
-        
-        this._url = NSURL.fileURLWithPath(this._path); 
+
+        this._url = NSURL.fileURLWithPath(this._path);
         this._player = new AVAudioPlayer();
         this._player.initWithContentsOfURLError(this._url);
         this._player.enableRate = true;
@@ -38,6 +38,7 @@ var Sound = (function (_super) {
     };
     Sound.prototype.setRate = function(rate) {
         console.assert(0.5 <= rate && rate <= 2);
+        console.log('iOS: Set rate to '+ rate)
         this._player.rate = rate;
         return true;
     };

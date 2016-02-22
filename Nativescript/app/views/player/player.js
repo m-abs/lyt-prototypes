@@ -18,7 +18,7 @@ exports.pageLoaded = function(args) {
     console.log('pageLoaded');
     page = args.object;
     webView = page.getViewById('my-webview');
-    
+
     webView.on(webViewModule.WebView.loadStartedEvent, function (args) {
         console.log('WebView:', (args.error ? 'Error loading ' : 'Loading ') + args.url);
     });
@@ -26,7 +26,7 @@ exports.pageLoaded = function(args) {
         console.log('WebView:', (args.error ? 'Error loading ' : 'Finished loading ') + args.url);
     });
     // webView.src = '<!DOCTYPE html><html><head><title>MyTitle</title><meta charset="utf-8" /></head><body><span style="color:red">Hello WÖRLD</span></body></html>';
-    
+
     slider = page.getViewById('my-slider');
     slider.on('touch', function (args) {
         if (!mySound) return;
@@ -38,7 +38,7 @@ exports.pageLoaded = function(args) {
             isSeeking = false;
         }
     });
-    
+
     if (intervalId) timer.clearInterval(intervalId);
     intervalId = timer.setInterval(function () {
         if (mySound) {
@@ -58,19 +58,19 @@ exports.pageLoaded = function(args) {
             ++intervalCount;
         }
     }, 1000);
-    
+
     playerModel = new Observable({'progress': 15, 'duration' : 0, 'playedText': ''});
     page.bindingContext = playerModel;
 };
 
 function getProgress() {
     return mySound.getCurrentPosition() / mySound.getDuration();
-} 
+}
 
 exports.playPause = function(args) {
     console.log('playPause', args);
     if (mySound) exports.stop();
-    mySound = Sound.create('~/mp3/thunder.mp3');
+    mySound = Sound.create('~/mp3/track_039.mp3');
     mySound.play();
     playerModel.duration = mySound.getDuration();
     console.log('duration', exports.getDuration());
@@ -101,11 +101,13 @@ exports.stop = function(args) {
 
 exports.toggleRate = function() {
     if (mySound) {
-        if (mySound.rate != 1) {
+        console.log('rate is '+ mySound.getRate());
+        if (mySound.getRate() == 1) {
             if (mySound.setRate(2)) {
                 page.getViewById('rate-btn').style.backgroundColor = new Color('Green');
             }
         } else {
+            page.getViewById('rate-btn').style.backgroundColor = new Color('Red');
             mySound.setRate(1);
         }
     }
