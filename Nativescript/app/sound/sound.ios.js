@@ -31,10 +31,10 @@ var Sound = (function (_super) {
         this._player = null;
     };
     Sound.prototype.getDuration = function() {
-        return this._player.duration;
+        return this._player.duration * 1000;
     };
     Sound.prototype.getCurrentPosition = function() {
-        return this._player.currentTime;
+        return this._player.currentTime * 1000;
     };
     Sound.prototype.setRate = function(rate) {
         console.assert(0.5 <= rate && rate <= 2);

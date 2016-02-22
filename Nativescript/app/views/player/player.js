@@ -42,7 +42,9 @@ exports.pageLoaded = function(args) {
     if (intervalId) timer.clearInterval(intervalId);
     intervalId = timer.setInterval(function () {
         if (mySound) {
-            playerModel.playedText = 'Played '+ mySound.getCurrentPosition() / 1000 + "s of "+ playerModel.duration / 1000 +"s";
+            var roundedPos = Math.round(mySound.getCurrentPosition() / 1000 * 100) / 100;
+            var roundedDur = Math.round(playerModel.duration / 1000 * 100) / 100;
+            playerModel.playedText = `Played ${roundedPos}s of ${roundedDur}s`;
             if (!isSeeking) {
                 var progressPercent = getProgress() * 100.0;
                 console.log('progress', progressPercent);
