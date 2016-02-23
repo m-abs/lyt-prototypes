@@ -37,14 +37,14 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 class AudioView extends Component {
   mixins: [TimerMixin];
   mySound: React.PropTypes.any;
-  
+
   constructor(props) {
     super(props);
     this.state = {
       fadeAnim: new Animated.Value(0),
     }
   }
-  
+
   componentWillMount() {
     this.setState({
       isSeeking: false,
@@ -54,16 +54,16 @@ class AudioView extends Component {
       value: 0.25,
     });
   }
-  
+
   componentDidMount() {
     this.interval = setInterval(this.tick.bind(this), 1000);
   }
-  
+
   componentWillUnmount() {
     clearInterval(this.interval);
     this.stopSound();
   }
-  
+
   tick() {
     console.log('beep');
     if (this.mySound && !this.state.isSeeking) {
@@ -75,7 +75,7 @@ class AudioView extends Component {
       });
     }
   }
-  
+
   playSound() {
     this.mySound = new Sound('thunder.mp3', Sound.MAIN_BUNDLE, (error, obj) => {
       if (error) {
@@ -83,14 +83,14 @@ class AudioView extends Component {
       } else { // loaded successfully
         console.log('mySound', this.mySound);
         console.log('duration in seconds: ' + this.mySound.getDuration());
-        
+
         this.setState({ duration: Math.round(this.mySound.getDuration()) });
-        
+
         Animated.spring(          // Uses easing functions
           this.state.fadeAnim,    // The value to drive
           {toValue: 1},           // Configuration
         ).start();
-        
+
         //Play the sound with an onEnd callback
         this.mySound.play((success) => {
           if (success) {
@@ -119,23 +119,25 @@ class AudioView extends Component {
       this.mySound.release();
       this.mySound = null;
       this.setState({progress: 0, secondsPlayed: 0});
-      
+
       Animated.spring(          // Uses easing functions
         this.state.fadeAnim,    // The value to drive
         {toValue: 0},           // Configuration
       ).start();
     }
     console.log('refs', this.refs.webview.getWebViewHandle());
+
+    // TODO: Fix autoscroll
     this.refs.webview.url = `./www/static.html#dol_1_15_zujc_1000`;
     this.refs.webview.reload();
   }
-  
+
   onSlidingStart() {
     if (this.mySound) {
       this.setState({'isSeeking': true});
     }
   }
-  
+
   onSlidingComplete(value) {
     if (this.mySound) {
       console.log('slide-complete', value);
@@ -144,7 +146,7 @@ class AudioView extends Component {
       this.setState({'isSeeking': false, 'progress': value});
     }
   }
-  
+
   render() {
     // console.log('this::render', this);
     return (
@@ -155,7 +157,7 @@ class AudioView extends Component {
             <Text style={styles.subtitle}>~React Native~</Text>
           </View>
           <Text style={styles.welcome}>LYT3 AudioPlayer Prototype</Text>
-          
+
           <View style={styles.audioControlRow}>
             <TouchableOpacity onPress={this.playSound.bind(this)} style={styles.audioControl}>
               <Icon name="play" size={44} color="#007aff" />
@@ -167,10 +169,10 @@ class AudioView extends Component {
               <Icon name="stop" size={44} color="#007aff" />
             </TouchableOpacity>
           </View>
-          
+
           { this.mySound ? this._renderAudioControls() : null }
         </View>
-        
+
         <View style={styles.webview}>
           <WebView
             ref={'webview'}
@@ -178,19 +180,19 @@ class AudioView extends Component {
             javascriptEnabled={true}
             injectedJavascript={`smoothScroll.init();`}
             renderError={(err) => console.log('renderErr', err)}
-            renderLoading={(arg) => console.log('renderLoad', arg)} 
+            renderLoading={(arg) => console.log('renderLoad', arg)}
             onError={(err) => console.log('err', err)}
             onLoad={(arg) => console.log('onLoad', arg)}
             onLoadStart={(arg) => console.log('onLoadStart', arg)}
             onNavigationStateChange={(arg) => console.log('onNavStateChange', arg)}
             onShouldStartLoadWithRequest={(arg) => true }
-            scalesPageToFit={true}>
+            scalesPageToFit={false}>
           </WebView>
         </View>
       </View>
     );
   }
-  
+
   _renderAudioControls() {
     return (
       <Animated.View style={{opacity: this.state.fadeAnim}}>
@@ -202,7 +204,7 @@ class AudioView extends Component {
           trackStyle={sliderStyle.track}
           thumbStyle={sliderStyle.thumb}
           minimumTrackTintColor='#007aff'
-          maximumTrackTintColor='#b7b7b7' />  
+          maximumTrackTintColor='#b7b7b7' />
         <Text style={styles.instructions}>
           Seconds played: {this.state.secondsPlayed}s / {this.state.duration}s
         </Text>
