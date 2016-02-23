@@ -1,0 +1,43 @@
+.getting-started {
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    margin: 20px 0;
+    line-height: 22px;
+    font-size: 16px;
+  }
+
+}
+
+#center-toolbar {
+  text-align: center;
+}
+
+.button-toolbar {
+  min-height: 2.2em;
+  min-width: 3.6em;
+  font-size: 1.6rem;
+}
+
+ion-content div.scroll {
+  height: 100%;
+}
+
+.webPage {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid map-get($colors, primary);
+  padding: 0;
+}
+
+.webContainer {
+  flex: 1;
+  height: 100%;
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

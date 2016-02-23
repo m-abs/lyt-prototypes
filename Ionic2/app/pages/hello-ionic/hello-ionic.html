@@ -1,0 +1,41 @@
+
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Ionic 2 AudioPlayer</ion-title>
+</ion-navbar>
+
+<ion-toolbar light center id="center-toolbar">
+  <button (click)="playMedia()" toolbar>
+    <ion-icon [name]="playPauseIcon"></ion-icon>
+  </button>
+  <button (click)="seekForward()" toolbar>
+    <ion-icon ios="ios-fastforward" md="md-fastforward"></ion-icon>
+  </button>
+  <button (click)="stopMedia()" toolbar danger>
+    <ion-icon ios="ios-square" md="md-square"></ion-icon>
+  </button>
+</ion-toolbar>
+
+<div class="row">
+  
+</div>
+<ion-content class="getting-started">
+  
+  <ion-content padding class="home">
+    
+    <p ng-hide="{media != null}">
+      <ion-icon name="ionic" style="font-size: 3em; vertical-align: middle; margin-right: 0.2em" primary></ion-icon>
+      Played {{currentPosition}}s of {{duration}}s
+    </p>
+    
+    <button (click)="obtainNetworkConnection()" full>Get Network Connection Type</button>
+  </ion-content>
+
+</ion-content>
+
+<ion-content class="webContainer">
+  <iframe class='webPage' name= "eventsPage" src="https://nota.dk/bibliotek">
+  </iframe>
+</ion-content>
