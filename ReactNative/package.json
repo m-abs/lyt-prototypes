@@ -1,0 +1,14 @@
+{
+  "name": "ReactNativeProto2",
+  "version": "0.0.3",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start"
+  },
+  "dependencies": {
+    "react-native": "^0.20.0",
+    "react-native-slider": "^0.4.0",
+    "react-native-sound": "^0.7.3",
+    "react-native-vector-icons": "^1.2.1"
+  }
+}
