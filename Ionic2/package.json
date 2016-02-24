@@ -14,8 +14,8 @@
     "strip-sourcemap-loader": "0.0.1",
     "typescript": "^1.7.3"
   },
-  "name": "ionic2_pluginstest",
-  "description": "Ionic2_PluginsTest: An Ionic project",
+  "name": "ionic2_test",
+  "description": "Ionic2_Test: An Ionic project",
   "cordovaPlugins": [
     "cordova-plugin-whitelist",
     "cordova-plugin-device",
@@ -23,13 +23,15 @@
     {
       "locator": "https://github.com/apache/cordova-plugin-media.git",
       "id": "cordova-plugin-media"
-    }
+    },
+    "nl.kingsquare.cordova.background-audio"
   ],
   "cordovaPlatforms": [
     {
       "platform": "android",
       "version": "5.1",
       "locator": "android@5.1"
-    }
+    },
+    "ios"
   ]
 }
