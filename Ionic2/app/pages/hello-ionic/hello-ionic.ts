@@ -12,21 +12,34 @@ export class HelloIonicPage {
   playPauseIcon: string = 'play';
   currentPosition: number = 0;
   duration: number = 0;
+  idCount: number = 1000;
+  myIframe: any;
 
   constructor(platform: Platform) {
     this.platform = platform;
     
     setInterval(() => {
-      if (this.media) {
+      if (this.media && this.isPlaying) {
         this.media.getCurrentPosition((position) => {
           if (position > -1) {
               this.currentPosition = Math.round(position * 100) / 100;
               this.duration = Math.round(this.media.getDuration() * 100) / 100;
-              console.log(`Played to ${this.currentPosition} of ${this.duration} in media.`);
+              
+              var iframe = window.document.getElementById('my-iframe').contentWindow;
+              iframe.smoothScroll.animateScroll('#dol_1_15_zujc_'+ this.idCount++);
           }
         }, function() { console.log('fail'); });
       }
     }, 1000);
+    
+    window.onload = (e : Event) => {
+      console.log('onload', e);
+      var iframe = window.document.getElementById('my-iframe').contentWindow;
+      console.log('iframe', iframe);
+      iframe.onload = (e : Event) => {
+        console.log('iframe.onload', e);
+      };
+    };
   }
 
   obtainNetworkConnection() {
@@ -57,7 +70,7 @@ export class HelloIonicPage {
         this.media = new Media('/android_asset/www/mp3/thunder.mp3',
           () => { console.log('mediaSuccess'); this.playPauseIcon = 'play'; },
           (err) => { console.log('mediaError', err); },
-          (status) => { console.log('Status change: '+ status); });
+          this.mediaStatusChanged;
         console.log(this.media.setRate(2));
         console.log('Created Media', this.media);
       }
@@ -93,5 +106,15 @@ export class HelloIonicPage {
         }
       });
     }
+  }
+  
+  mediaStatusChanged(statusId) {
+    var states = {
+      1: 'Loading',
+      2: 'Playing',
+      3: 'Paused',
+      4: 'Done'
+    };
+    console.log('media.stateChange', states[statusId]);
   }
 }

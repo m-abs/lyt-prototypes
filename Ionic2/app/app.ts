@@ -16,7 +16,7 @@ export class MyApp {
     platform.ready().then(() => {
       console.log('=== PLATFORM READY ===');
       console.log('Cordova', window.cordova);
-      console.log('Cordova', window.device);
+      console.log('Device', window.device);
       // The platform is now ready. Note: if this callback fails to fire, follow
       // the Troubleshooting guide for a number of possible solutions:
       //

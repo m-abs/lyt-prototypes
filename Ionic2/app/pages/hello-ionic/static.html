@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Why does e=mc2?</title>
+    <meta http-equiv="content-type" content="text/html; charset=Windows-1252"/>
+    <meta name="dc:identifier" content="UK-RNIB-97F581A4-607E-4861-8BCD-DEEDCF029F5E"/>
+    <script type="text/javascript">
+/*! smooth-scroll v9.1.1 | (c) 2016 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */
+!function(e,t){"function"==typeof define&&define.amd?define([],t(e)):"object"==typeof exports?module.exports=t(e):e.smoothScroll=t(e)}("undefined"!=typeof global?global:this.window||this.global,function(e){"use strict";var t,n,r,o,a,c={},u="querySelector"in document&&"addEventListener"in e,i={selector:"[data-scroll]",selectorHeader:"[data-scroll-header]",speed:500,easing:"easeInOutCubic",offset:0,updateURL:!0,callback:function(){}},l=function(){var e={},t=!1,n=0,r=arguments.length;"[object Boolean]"===Object.prototype.toString.call(arguments[0])&&(t=arguments[0],n++);for(var o=function(n){for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(t&&"[object Object]"===Object.prototype.toString.call(n[r])?e[r]=l(!0,e[r],n[r]):e[r]=n[r])};r>n;n++){var a=arguments[n];o(a)}return e},s=function(e){return Math.max(e.scrollHeight,e.offsetHeight,e.clientHeight)},f=function(e,t){var n,r,o=t.charAt(0),a="classList"in document.documentElement;for("["===o&&(t=t.substr(1,t.length-2),n=t.split("="),n.length>1&&(r=!0,n[1]=n[1].replace(/"/g,"").replace(/'/g,"")));e&&e!==document;e=e.parentNode){if("."===o)if(a){if(e.classList.contains(t.substr(1)))return e}else if(new RegExp("(^|\\s)"+t.substr(1)+"(\\s|$)").test(e.className))return e;if("#"===o&&e.id===t.substr(1))return e;if("["===o&&e.hasAttribute(n[0])){if(!r)return e;if(e.getAttribute(n[0])===n[1])return e}if(e.tagName.toLowerCase()===t)return e}return null};c.escapeCharacters=function(e){"#"===e.charAt(0)&&(e=e.substr(1));for(var t,n=String(e),r=n.length,o=-1,a="",c=n.charCodeAt(0);++o<r;){if(t=n.charCodeAt(o),0===t)throw new InvalidCharacterError("Invalid character: the input contains U+0000.");a+=t>=1&&31>=t||127==t||0===o&&t>=48&&57>=t||1===o&&t>=48&&57>=t&&45===c?"\\"+t.toString(16)+" ":t>=128||45===t||95===t||t>=48&&57>=t||t>=65&&90>=t||t>=97&&122>=t?n.charAt(o):"\\"+n.charAt(o)}return"#"+a};var d=function(e,t){var n;return"easeInQuad"===e&&(n=t*t),"easeOutQuad"===e&&(n=t*(2-t)),"easeInOutQuad"===e&&(n=.5>t?2*t*t:-1+(4-2*t)*t),"easeInCubic"===e&&(n=t*t*t),"easeOutCubic"===e&&(n=--t*t*t+1),"easeInOutCubic"===e&&(n=.5>t?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1),"easeInQuart"===e&&(n=t*t*t*t),"easeOutQuart"===e&&(n=1- --t*t*t*t),"easeInOutQuart"===e&&(n=.5>t?8*t*t*t*t:1-8*--t*t*t*t),"easeInQuint"===e&&(n=t*t*t*t*t),"easeOutQuint"===e&&(n=1+--t*t*t*t*t),"easeInOutQuint"===e&&(n=.5>t?16*t*t*t*t*t:1+16*--t*t*t*t*t),n||t},h=function(e,t,n){var r=0;if(e.offsetParent)do r+=e.offsetTop,e=e.offsetParent;while(e);return r=r-t-n,r>=0?r:0},m=function(){return Math.max(e.document.body.scrollHeight,e.document.documentElement.scrollHeight,e.document.body.offsetHeight,e.document.documentElement.offsetHeight,e.document.body.clientHeight,e.document.documentElement.clientHeight)},p=function(e){return e&&"object"==typeof JSON&&"function"==typeof JSON.parse?JSON.parse(e):{}},g=function(t,n){e.history.pushState&&(n||"true"===n)&&"file:"!==e.location.protocol&&e.history.pushState(null,null,[e.location.protocol,"//",e.location.host,e.location.pathname,e.location.search,t].join(""))},b=function(e){return null===e?0:s(e)+e.offsetTop};c.animateScroll=function(n,c,u){var s=p(c?c.getAttribute("data-options"):null),f=l(t||i,u||{},s),v="[object Number]"===Object.prototype.toString.call(n)?!0:!1,y=v?null:"#"===n?e.document.documentElement:e.document.querySelector(n);if(v||y){var O=e.pageYOffset;r||(r=e.document.querySelector(f.selectorHeader)),o||(o=b(r));var S,I,H=v?n:h(y,o,parseInt(f.offset,10)),E=H-O,j=m(),C=0;v||g(n,f.updateURL);var L=function(t,r,o){var a=e.pageYOffset;(t==r||a==r||e.innerHeight+a>=j)&&(clearInterval(o),v||y.focus(),f.callback(n,c))},w=function(){C+=16,S=C/parseInt(f.speed,10),S=S>1?1:S,I=O+E*d(f.easing,S),e.scrollTo(0,Math.floor(I)),L(I,H,a)},A=function(){clearInterval(a),a=setInterval(w,16)};0===e.pageYOffset&&e.scrollTo(0,0),A()}};var v=function(e){if(0===e.button&&!e.metaKey&&!e.ctrlKey){var n=f(e.target,t.selector);if(n&&"a"===n.tagName.toLowerCase()){e.preventDefault();var r=c.escapeCharacters(n.hash);c.animateScroll(r,n,t)}}},y=function(e){n||(n=setTimeout(function(){n=null,o=b(r)},66))};return c.destroy=function(){t&&(e.document.removeEventListener("click",v,!1),e.removeEventListener("resize",y,!1),t=null,n=null,r=null,o=null,a=null)},c.init=function(n){u&&(c.destroy(),t=l(i,n||{}),r=e.document.querySelector(t.selectorHeader),o=b(r),e.document.addEventListener("click",v,!1),r&&e.addEventListener("resize",y,!1))},c});
+    </script>
+    <script type="text/javascript">
+        smoothScroll.init();
+    </script>
+	</head>
+	<body>
+		<h1 class="title" align="center" id="dol_1_1_zujc_0001">
+            Why Does E=mc<sup>2</sup>?<br/>
+            by Brian Cox and Jeff Forshaw
+        </h1>
+		<h1 id="dol_1_2_zujc_0004">
+            Details of Book
+        </h1>
+		<p>
+			<span class="sentence" id="dol_1_2_zujc_0005">Read by Peter Crerar.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_2_zujc_0006">It lasts 8 hours 37 minutes</span>
+		</p>
+
+		<h1 id="dol_1_15_zujc_0825">
+            Chapter 4: Spacetime
+        </h1>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0826">In the previous chapters we followed the historical road to relativity, and in fact our reasoning was not too far from what Einstein originally presented.</span>
+			<span class="sentence" id="dol_1_15_zujc_0827">We have been forced to accept that space is not the great stage upon which the events of our lives are played out.</span>
+			<span class="sentence" id="dol_1_15_zujc_0828">Likewise, time is not something universal and absolute.</span>
+			<span class="sentence" id="dol_1_15_zujc_0829">Instead we moved toward a picture of space and time that is much more malleable and subjective.</span>
+			<span class="sentence" id="dol_1_15_zujc_0830">The great clock in the sky, and in some sense the sky itself, has been banished.</span>
+			<span class="sentence" id="dol_1_15_zujc_0831">It might feel to us like the world is a box within which we go about our business, because that picture allows us to make sense of it quickly and efficiently.</span>
+			<span class="sentence" id="dol_1_15_zujc_0832">The ability to map the movement of things against an imaginary grid is what we might call spatial awareness, and it is clearly important if you are to avoid predators, catch food, and survive in a dangerous and challenging environment.</span>
+			<span class="sentence" id="dol_1_15_zujc_0833">But there is no reason why this model, buried deep within our brains and reinforced over millions of years by natural selection, should be anything other than a model.</span>
+			<span class="sentence" id="dol_1_15_zujc_0834">If a way of thinking about the world confers a survival advantage, then that way of thinking will become ubiquitous.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0835">58</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0836">The scientific correctness of it is irrelevant.</span>
+			<span class="sentence" id="dol_1_15_zujc_0837">The important thing is that, because we chose to accept the results of experiments conducted on Faraday's mottled benchtop and the explanations codified by Maxwell, we have acted like scientists and rejected the comfortable model of space and time that allowed our ancestors to survive and prosper on the ancient plains of Africa.</span>
+			<span class="sentence" id="dol_1_15_zujc_0838">This model has been embedded and reinforced deep within our psyche by our experiences over many millions of years, and discarding it may well be disorientating.</span>
+			<span class="sentence" id="dol_1_15_zujc_0839">That dizzying feeling of confusion, if (hopefully) followed by an epiphany of clarity, is the joy of science.</span>
+			<span class="sentence" id="dol_1_15_zujc_0840">If the listener is feeling the former, we hope to deliver the latter by the end of the book.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0841">This is not a history book.</span>
+			<span class="sentence" id="dol_1_15_zujc_0842">Our aim is to describe space and time in the most enlightening way we can, and it is our view that the historical road to relativity does not necessarily provide the best path to enlightenment.</span>
+			<span class="sentence" id="dol_1_15_zujc_0843">From a modern perspective, over a century after Einstein's revolution, we have learned that there is a deeper and more satisfying way to think about space and time.</span>
+			<span class="sentence" id="dol_1_15_zujc_0844">Rather than dig any deeper into the old-fashioned textbook view, we are going to start again from a blank canvas.</span>
+			<span class="sentence" id="dol_1_15_zujc_0845">In so doing we will come to understand what Minkowski meant when he said that space and time must be merged together into a single entity.</span>
+			<span class="sentence" id="dol_1_15_zujc_0846">Once we have developed a more elegant picture, we will be well placed to achieve our principal goal ï¿½ we shall be able to derive E=mc<sup>2</sup>.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0847">Here is the starting point.</span>
+			<span class="sentence" id="dol_1_15_zujc_0848">Einstein's theories can be constructed almost entirely using the language of geometry.</span>
+			<span class="sentence" id="dol_1_15_zujc_0849">That is, you don't need much algebra, just pictures and concepts.</span>
+			<span class="sentence" id="dol_1_15_zujc_0850">At the heart of the matter, there lie only three concepts: invariance, causality, and distance.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0851">59</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0852">Unless you are a physicist, two of these will probably be unfamiliar words, and the third familiar but, as we shall see, subtle.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0853">Invariance is a concept that lies at the core of modern physics.</span>
+			<span class="sentence" id="dol_1_15_zujc_0854">Glance out at the world now, then turn around and look in the opposite direction.</span>
+			<span class="sentence" id="dol_1_15_zujc_0855">Your room will look different from different vantage points, of course, but the laws of nature are the same.</span>
+			<span class="sentence" id="dol_1_15_zujc_0856">It doesn't matter whether you are pointing north, south, east, or west, gravity still has the same strength and still keeps your feet on the ground.</span>
+			<span class="sentence" id="dol_1_15_zujc_0857">Your TV still works when you spin it around, and your car still starts whether you've left it in London, Los Angeles, or Tokyo.</span>
+			<span class="sentence" id="dol_1_15_zujc_0858">These are all examples of invariance in nature.</span>
+			<span class="sentence" id="dol_1_15_zujc_0859">When put like this, invariance seems like little more than a statement of the obvious.</span>
+			<span class="sentence" id="dol_1_15_zujc_0860">But imposing the requirement of invariance on our scientific theories proves to be an astonishingly fruitful thing to do.</span>
+			<span class="sentence" id="dol_1_15_zujc_0861">We have just described two different forms of invariance.</span>
+			<span class="sentence" id="dol_1_15_zujc_0862">The requirement that the laws of nature will not change if we spin around and determine them while facing different directions is called rotational invariance.</span>
+			<span class="sentence" id="dol_1_15_zujc_0863">The requirement that the laws will not change if we move from place to place is called translational invariance.</span>
+			<span class="sentence" id="dol_1_15_zujc_0864">These seemingly trivial requirements turned out to be astonishingly powerful in the hands of Emmy Noether, whom Albert Einstein described as the most important woman in the history of mathematics.</span>
+			<span class="sentence" id="dol_1_15_zujc_0865">In 1918 Noether published a theorem that revealed a deep connection between invariance and the conservation of particular physical quantities.</span>
+			<span class="sentence" id="dol_1_15_zujc_0866">We will have more to say about conservation laws in physics later on, but for now let us just state the deep result Noether discovered.</span>
+			<span class="sentence" id="dol_1_15_zujc_0867">For the specific example of looking at the world in different directions, if the laws of nature remain unchanged irrespective of the direction in which we are facing, then there exists a quantity that is conserved.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0868">60</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0869">In this case, the conserved quantity is called angular momentum.</span>
+			<span class="sentence" id="dol_1_15_zujc_0870">For the case of translational invariance, the quantity is called momentum.</span>
+			<span class="sentence" id="dol_1_15_zujc_0871">Why should this be important?</span>
+			<span class="sentence" id="dol_1_15_zujc_0872">Let's pull an interesting physics fact out of the metaphorical hat and explain it.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0873">The moon moves 4 centimeters farther away from the earth every year.</span>
+			<span class="sentence" id="dol_1_15_zujc_0874">Why?</span>
+			<span class="sentence" id="dol_1_15_zujc_0875">Picture the moon in your mind's eye as being stationary above the surface of the spinning earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_0876">The water in the oceans directly beneath the moon will bulge out a tiny bit toward the moon because the moon's gravity is pulling it, and the earth will rotate once a day beneath this bulge.</span>
+			<span class="sentence" id="dol_1_15_zujc_0877">This is the cause of the ocean tides.</span>
+			<span class="sentence" id="dol_1_15_zujc_0878">There is friction between the water and the surface of the earth, and this friction causes the earth's rate of spin to slow down.</span>
+			<span class="sentence" id="dol_1_15_zujc_0879">The effect is tiny but measurable; the earth's day is gradually lengthening by approximately two-thousandths of a second per century.</span>
+			<span class="sentence" id="dol_1_15_zujc_0880">Physicists measure the rate of spin using angular momentum, so we can say that the angular momentum of the earth is reducing over time.</span>
+			<span class="sentence" id="dol_1_15_zujc_0881">Noether tells us that because the world looks the same in every direction (to be more precise, the laws of nature are invariant under rotations), then angular momentum is conserved, which means that the total amount of spin must not change.</span>
+			<span class="sentence" id="dol_1_15_zujc_0882">So what happens to the angular momentum the earth loses by tidal friction?</span>
+			<span class="sentence" id="dol_1_15_zujc_0883">The answer is that it is transferred to the moon, which speeds up in its orbit around the earth to compensate for the slowing down of the earth's rotation.</span>
+			<span class="sentence" id="dol_1_15_zujc_0884">This causes it to drift slightly farther away from the earth.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0885">61</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0886">In other words, to ensure that the total angular momentum of the earth and moon system is conserved, the moon must drift into a wider orbit around the earth to compensate for the fact that the earths rate of spin is slowing down.</span>
+			<span class="sentence" id="dol_1_15_zujc_0887">This is a very real and quite fantastic effect.</span>
+			<span class="sentence" id="dol_1_15_zujc_0888">The moon is big, and it is drifting farther away from the earth as every year goes by to conserve angular momentum.</span>
+			<span class="sentence" id="dol_1_15_zujc_0889">Italian novelist Italo Calvino found it so wonderful that he wrote a short story called "The Distance of the Moon," in which he imagined a time in the distant past when our ancestors could sail each night across the ocean in boats to meet the setting moon and clamber onto its surface using ladders.</span>
+			<span class="sentence" id="dol_1_15_zujc_0890">As the moon drifted farther away over the years, there came a night when the moon lovers had to make a choice between becoming trapped on the moon forever or returning to Earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_0891">This surprising and, in the hands of Calvino, strangely romantic phenomenon has its explanation in the abstract concept of invariance and the deep connection between invariance and the conservation of physical quantities.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0892">It is difficult to overstate the importance of the idea of invariance in modern science.</span>
+			<span class="sentence" id="dol_1_15_zujc_0893">At the heart of physics is the desire to produce an intellectual framework that is universal and in which the laws are never a matter of opinion.</span>
+			<span class="sentence" id="dol_1_15_zujc_0894">As physicists, we aim to uncover the invariant properties of the universe because, as Noether well knew, these lead us to real and tangible insights.</span>
+			<span class="sentence" id="dol_1_15_zujc_0895">Identifying the invariant properties is far from easy, however, because nature's underlying simplicity and beauty are often hidden.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0896">Nowhere in science is this truer than in modern particle physics.</span>
+			<span class="sentence" id="dol_1_15_zujc_0897">Particle physics is the study of the subatomic world; the quest for the fundamental building blocks of the universe and the forces of nature that stick them together.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0898">62</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0899">We have already met one of the fundamental forces, electromagnetism.</span>
+			<span class="sentence" id="dol_1_15_zujc_0900">Understanding it led us to an explanation for the nature of light that has launched us on the road to relativity.</span>
+			<span class="sentence" id="dol_1_15_zujc_0901">In the subatomic world there are two other forces of nature that hold sway.</span>
+			<span class="sentence" id="dol_1_15_zujc_0902">The strong nuclear force sticks the atomic nucleus together at the heart of the atom, and the weak nuclear force allows stars to shine and is responsible for certain types of radioactive decay; the use of radiocarbon dating to measure the age of things, for example, relies on the weak nuclear force.</span>
+			<span class="sentence" id="dol_1_15_zujc_0903">The fourth force is gravity, the most familiar perhaps, but by far the weakest.</span>
+			<span class="sentence" id="dol_1_15_zujc_0904">Our best theory of gravity today is still Einstein's general theory of relativity and, as we shall see in the final chapter, it is a theory of space and time.</span>
+			<span class="sentence" id="dol_1_15_zujc_0905">These four forces act between just twelve fundamental particles to build everything in the world we can see, including the sun, moon, and stars, all the planets in our solar system, and indeed our own bodies.</span>
+			<span class="sentence" id="dol_1_15_zujc_0906">This all constitutes an astonishing simplification of what at first glance appears to be an almost infinitely complicated universe.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0907">Glance out your window.</span>
+			<span class="sentence" id="dol_1_15_zujc_0908">You may be faced with the distorted reflections of a city, as the afternoon light scatters off sheets of steel and glass, or black and white cattle grazing in neatly fenced green fields.</span>
+			<span class="sentence" id="dol_1_15_zujc_0909">But whether cityscape or farmland, the most astonishing thing about practically every window view in the world is the evidence of human intervention.</span>
+			<span class="sentence" id="dol_1_15_zujc_0910">Our civilization is all-pervasive, and yet twenty-first-century physics tells us that, at its heart, it is all a mathematical dance involving a handful of subatomic particles, organized by only four forces of nature over 13.7 billion years.</span>
+			<span class="sentence" id="dol_1_15_zujc_0911">The complexity of human brains and the products of the powerful synthesis between consciousness and dexterous skill that we glimpse outside our windows mask the underlying simplicity and elegance of nature.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0912">63</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0913">The scientist's task is to hunt for those properties that act as a Rosetta stone, to allow us to decipher the language of nature and reveal its beauty.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0914">The tool that allows us to search for and exploit these properties of nature is mathematics.</span>
+			<span class="sentence" id="dol_1_15_zujc_0915">In itself, this is a sentence that throws up deep questions, and entire books have been written attempting to advance plausible reasons as to why it may be so.</span>
+			<span class="sentence" id="dol_1_15_zujc_0916">Quoting Eugene Wigner again: "The miracle of the appropriateness of the language of mathematics for the formulation of the laws of physics is a wonderful gift which we neither understand nor deserve."</span>
+			<span class="sentence" id="dol_1_15_zujc_0917">Perhaps we will never understand the true nature of the relationship between mathematics and nature, but history has shown that mathematics allows us to organize our thinking in a way that proves to be a reliable guide to a deeper understanding.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0918">As we have been at pains to emphasize, to proceed in this spirit, physicists write down equations, and equations do nothing more than express relationships between different real-world "things."</span>
+			<span class="sentence" id="dol_1_15_zujc_0919">An example of an equation is speed = distance/time, which we met in the last chapter when we were discussing light clocks: in symbols v = x/t, where v is the speed, x is the distance traveled, and t is the time taken to travel the distance x.</span>
+			<span class="sentence" id="dol_1_15_zujc_0920">Very simply, recall that if you travel 60 miles in 1 hour, then you have traveled at a speed of 60 miles per hour.</span>
+			<span class="sentence" id="dol_1_15_zujc_0921">Now, the most interesting equations will be those that are capable of furnishing a description of nature that is agreed upon by everyone.</span>
+			<span class="sentence" id="dol_1_15_zujc_0922">That is, they should deal <i>only</i> in invariant quantities.</span>
+			<span class="sentence" id="dol_1_15_zujc_0923">We could all then agree on what we are measuring, irrespective of our perspective in the universe.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0924">64</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0925">According to common sense, the distance between any two points in space is such an invariant quantity, and pre-Einstein it was.</span>
+			<span class="sentence" id="dol_1_15_zujc_0926">But we saw in the previous chapter that it is no such thing.</span>
+			<span class="sentence" id="dol_1_15_zujc_0927">Remember: Common sense is not always reliable.</span>
+			<span class="sentence" id="dol_1_15_zujc_0928">Similarly, the passage of time has become a subjective thing and it varies depending on how fast clocks are moving relative to each other.</span>
+			<span class="sentence" id="dol_1_15_zujc_0929">Einstein has upset the order of things, and we cannot even rely on distance and time to build a reliable picture of the universe.</span>
+			<span class="sentence" id="dol_1_15_zujc_0930">From the point of view of a physicist looking for the deep laws of nature, the equation v = x/t is therefore of no fundamental use, because it does not express a relationship between invariant quantities.</span>
+			<span class="sentence" id="dol_1_15_zujc_0931">By undermining space and time, we have shaken the very foundations of physics.</span>
+			<span class="sentence" id="dol_1_15_zujc_0932">What, then, are we to do?</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0933">One option is to try and reestablish order by making a conjecture.</span>
+			<span class="sentence" id="dol_1_15_zujc_0934">Conjecture is a fancy word for "guess," and scientists do it all the time ï¿½ there are no prizes for how smart we are in figuring out the underlying theory; a successful educated guess will do just fine so long as it agrees with experiment.</span>
+			<span class="sentence" id="dol_1_15_zujc_0935">The conjecture is radical: <i>Space and time can be merged into a single entity that we call "spacetime," and distances in spacetime are invariant</i>.</span>
+			<span class="sentence" id="dol_1_15_zujc_0936">This is a bold assertion and its content will become clearer as we go.</span>
+			<span class="sentence" id="dol_1_15_zujc_0937">When you think about it for a moment, it is perhaps less bold than it seems at first sight.</span>
+			<span class="sentence" id="dol_1_15_zujc_0938">If we are to lose the age-old certainties of absolute, unvarying distances in space and the unchanging tick-tock of time as the great clock in the sky marks the passing of the years, then maybe the only thing to do is to search for some kind of unification of the two seemingly separate concepts.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0939">65</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0940">Therefore, our immediate challenge is to search for a new measure of distance in spacetime that does <i>not</i> change depending on how we move around relative to each other.</span>
+			<span class="sentence" id="dol_1_15_zujc_0941">We will need to tread carefully to understand how the spacetime synthesis works.</span>
+			<span class="sentence" id="dol_1_15_zujc_0942">But what exactly does it mean to search for a distance in spacetime?</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0943">Suppose I get out of bed at 7 a.m. and finish my breakfast at 8 a.m.</span>
+			<span class="sentence" id="dol_1_15_zujc_0944">The following statements are true given what we know from experiment: (1) I may measure the distance in space from my bed to my kitchen to be 10 meters, but someone whizzing by at high speed will measure a different distance; (2) My watch indicates that I took 1 hour to eat breakfast, but the high-speed observer will record a different time.</span>
+			<span class="sentence" id="dol_1_15_zujc_0945">Our conjecture is that the distance in <i>spacetime</i> between my getting out of bed and my finishing breakfast is something we can all agree upon ï¿½ i.e., it is invariant.</span>
+			<span class="sentence" id="dol_1_15_zujc_0946">The existence of this consensus is crucial because we want to build up a set of natural laws using only this type of object.</span>
+			<span class="sentence" id="dol_1_15_zujc_0947">Of course, we just guessed that this might be how things are and we certainly haven't proven anything yet.</span>
+			<span class="sentence" id="dol_1_15_zujc_0948">We haven't even decided how to calculate distances in spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_0949">But to proceed further, we must first explain what is meant by the second of our three key words, <i>causality</i>.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0950">Causality is another seemingly obvious concept whose application will have profound consequences.</span>
+			<span class="sentence" id="dol_1_15_zujc_0951">It is simply the requirement that cause and effect are so important that their order cannot be reversed.</span>
+			<span class="sentence" id="dol_1_15_zujc_0952">Your mother caused your birth, and no self-consistent picture of space and time should allow you to be born before your mother.</span>
+			<span class="sentence" id="dol_1_15_zujc_0953">To construct a theory of the universe in which you could be born first would be nonsense and lead to contradictions.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0954">66</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0955">When put in these terms, nobody could argue with the requirement of causality.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0956">It is worth reflecting, however, that humans seem capable of ignoring it on a daily basis.</span>
+			<span class="sentence" id="dol_1_15_zujc_0957">Take prophesy, for example.</span>
+			<span class="sentence" id="dol_1_15_zujc_0958">Figures like Nostradamus are revered to this day for allegedly being able to see events that happen in the future, either in dreams or some other mystical trancelike state.</span>
+			<span class="sentence" id="dol_1_15_zujc_0959">In other words, events that happened centuries after Nostradamus' death were visible in his lifetime, at least to him.</span>
+			<span class="sentence" id="dol_1_15_zujc_0960">Nostradamus died in 1566, but he is credited with observing the Great Fire of London in 1666, the rise of Napoleon and Hitler, the September 11, 2001, attacks on the United States, and, our own personal favorite, the rise of the Antichrist in Russia in 1999.</span>
+			<span class="sentence" id="dol_1_15_zujc_0961">The Antichrist hasn't appeared yet but perhaps he/she is still rising and if he/she does appear before this book is published, then we stand corrected.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0962">Putting amusing drivel aside, we need to introduce some important terminology.</span>
+			<span class="sentence" id="dol_1_15_zujc_0963">Nostradamus's death was an "event," as were the birth of Adolf Hitler and the Great Fire of London.</span>
+			<span class="sentence" id="dol_1_15_zujc_0964">For Nostradamus to observe an event such as the Great Fire that happened after his death would require the ordering of the two events to be reversed.</span>
+			<span class="sentence" id="dol_1_15_zujc_0965">To say this explicitly is almost a tautology; Nostradamus died before the Great Fire, and therefore he could not have observed it.</span>
+			<span class="sentence" id="dol_1_15_zujc_0966">To observe it, the event that is the Great Fire must have been available for viewing before the event that is Nostradamus's death, and therefore the order of the events must have been reversed.</span>
+			<span class="sentence" id="dol_1_15_zujc_0967">There is an important subtlety: Nostradamus could have caused the Great Fire.</span>
+			<span class="sentence" id="dol_1_15_zujc_0968">We could imagine that he left a sum of money in a bank account that encouraged someone to light a fire in Pudding Lane shortly after midnight on September 2, 1666.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0969">67</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0970">This would establish a causal link between the events associated with the life and death of Nostradamus and the events associated with the Great Fire of London.</span>
+			<span class="sentence" id="dol_1_15_zujc_0971">As we shall see later, it is in fact only the ordering of such connected events (called causally connected events) that cannot be reversed ï¿½ cause and effect are sacred in Einstein's universe.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0972">Other events occur far enough away from each other in space and time that they could not have any possible influence on each other.</span>
+			<span class="sentence" id="dol_1_15_zujc_0973">Remarkably, the ordering of these can be reversed.</span>
+			<span class="sentence" id="dol_1_15_zujc_0974">Einstein's theory exploits a loophole that allows the order of events to be switched provided that doing so makes absolutely no difference to the workings of the universe.</span>
+			<span class="sentence" id="dol_1_15_zujc_0975">We shall explain what we mean by "far enough away" later on.</span>
+			<span class="sentence" id="dol_1_15_zujc_0976">For now, we have introduced the concept of causality as an axiom that we shall use to build our theory of spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_0977">The success of the theory in predicting the outcome of experiments will of course be the ultimate arbiter.</span>
+			<span class="sentence" id="dol_1_15_zujc_0978">As an aside, Nostradamus did get one prediction right.</span>
+			<span class="sentence" id="dol_1_15_zujc_0979">While suffering from a particularly acute bout of gout, he apparently told his secretary, "You will not find me alive at sunrise."</span>
+			<span class="sentence" id="dol_1_15_zujc_0980">The next morning he was found dead on the floor.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0981">What has causality got to do with spacetime and, in particular, distances in spacetime?</span>
+			<span class="sentence" id="dol_1_15_zujc_0982">Well, we will soon discover that insisting on a causal universe constrains the structure of spacetime to such an extent that we are left with no choice in the matter.</span>
+			<span class="sentence" id="dol_1_15_zujc_0983">There will be only one way in which we can merge space and time together to manufacture spacetime while simultaneously preserving the causal order of things.</span>
+			<span class="sentence" id="dol_1_15_zujc_0984">Any other way would violate causality and allow us to do fantastical things like going back in time to prevent our own birth or, in Nostradamus's case, perhaps avoiding a lifestyle that made him susceptible to gout.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0985">68</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0986">Time now to return to the challenge of developing the concept of distance in spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_0987">To get warmed up we will set time to one side for the moment and think about the idea of distance in ordinary three-dimensional space, a concept with which we are all familiar.</span>
+			<span class="sentence" id="dol_1_15_zujc_0988">Suppose we try to measure the shortest distance between two cities on a flat map of the earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_0989">As will be very familiar to anyone who has flown on a long-haul flight and watched her progress on the map on the aircraft entertainment system, the shortest distance between any two points on the earth's surface appears as a curve.</span>
+			<span class="sentence" id="dol_1_15_zujc_0990">This line is known as a great circle.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_0991">69</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0992">The curved nature of the earth's surface is also the reason why, on some flat maps, Greenland looks much bigger than Australia, when in reality it is much smaller.</span>
+			<span class="sentence" id="dol_1_15_zujc_0993">The message is clear: Straight lines represent the shortest distance between two points only in flat space.</span>
+			<span class="sentence" id="dol_1_15_zujc_0994">The geometry of flat space is often called Euclidean geometry.</span>
+			<span class="sentence" id="dol_1_15_zujc_0995">What Euclid didn't know at the time, however, and in fact it did not become clear until the nineteenth century, was that his geometry of flat space is only a specific example of a whole family of different possible geometries, each of which are mathematically consistent and some of which can be used to describe nature.</span>
+			<span class="sentence" id="dol_1_15_zujc_0996">A very good example is the surface of the earth, which is curved and therefore described using a geometry that is non-Euclidean.</span>
+			<span class="sentence" id="dol_1_15_zujc_0997">Specifically, the shortest distance between two points is not a Euclidean straight line.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_0998">There are other familiar Euclidean properties that are not obeyed on the surface of the earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_0999">For example, the interior angles of a triangle no longer add up to 180 degrees, and lines that are parallel and point north-south at the equator cross at the poles.</span>
+			<span class="sentence" id="dol_1_15_zujc_1000">If Euclid is no use anymore, we need to figure out how to calculate distances in a curved space, such as on the earth's surface.</span>
+			<span class="sentence" id="dol_1_15_zujc_1001">One way would be to work directly with a globe and measure out the distances using a piece of string.</span>
+			<span class="sentence" id="dol_1_15_zujc_1002">Now we would be correctly accounting for the curvature of the earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1003">An airline pilot could stretch a piece of string between two cities on the globe, measure its length with a ruler, and then simply multiply the answer by the ratio in size of the globe and the earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1004">But maybe we don't have a globe on hand, or maybe we need to write the computer software that helps airplanes navigate.</span>
+			<span class="sentence" id="dol_1_15_zujc_1005">In either case, we need to do better than a piece of string and figure out an equation that tells us the distance between any two points on the earth's surface given only their latitude and longitude, and the shape and size of the earth.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1006">70</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1007">Such an equation is not too hard to find and if you know a little mathematics you might even try to find it.</span>
+			<span class="sentence" id="dol_1_15_zujc_1008">We don't need to express it down here, but the point is that an equation exists and it hasn't got much to do with the Euclidean geometry of a flat tabletop.</span>
+			<span class="sentence" id="dol_1_15_zujc_1009">It does, however, allow one to calculate the shortest distance between two points on a sphere, in much the same way that Pythagoras' theorem is a recipe for calculating the shortest distance between two points (the hypotenuse) on a tabletop if we know the distances from one corner as measured along the edges of the table.</span>
+			<span class="sentence" id="dol_1_15_zujc_1010">Since straight lines belong in the domain of Euclid, we shall introduce a new term for the shortest distance between two points that applies whether the space is curved or flat.</span>
+			<span class="sentence" id="dol_1_15_zujc_1011">This line is called a geodesic: A great circle is a geodesic on the surface of the earth and a straight line is a geodesic in flat space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1012">So much for distances in three-dimensional space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1013">Now we must decide how to measure distances in spacetime, so let's go ahead and complicate matters by adding time into the mix.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1014">We already introduced the concepts we will need when we thought about getting out of bed and finishing breakfast in the kitchen.</span>
+			<span class="sentence" id="dol_1_15_zujc_1015">There is no problem in saying that the distance in space between the bed and the kitchen is 10 meters.</span>
+			<span class="sentence" id="dol_1_15_zujc_1016">We could also say, although it sounds rather strange, that the distance in time between getting out of bed and finishing breakfast is 1 hour.</span>
+			<span class="sentence" id="dol_1_15_zujc_1017">This is not how we naturally think about time, because we are not used to describing it in the language of geometry.</span>
+			<span class="sentence" id="dol_1_15_zujc_1018">We would rather say "one hour passed between my getting out of bed and finishing my breakfast."</span>
+			<span class="sentence" id="dol_1_15_zujc_1019">In the same way, we would not normally say "10 meters have passed since I got out of bed and sat down in the kitchen."</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1020">71</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1021">Space is space, and time is time, and never the twain shall be intermingled.</span>
+			<span class="sentence" id="dol_1_15_zujc_1022">But we have set ourselves the task of trying to merge space and time together, because we suspect that this is the only way to rebuild things in a way that fits with Maxwell and Einstein.</span>
+			<span class="sentence" id="dol_1_15_zujc_1023">So let us proceed and see where it leads us.</span>
+			<span class="sentence" id="dol_1_15_zujc_1024">If you are not a scientist, then this may be the most difficult part of the book so far because we are operating in a purely abstract fashion.</span>
+			<span class="sentence" id="dol_1_15_zujc_1025">The capacity for abstract thought is what gives science its power, but also perhaps gives it a reputation as being difficult because it is not a faculty we generally need too much in everyday life.</span>
+			<span class="sentence" id="dol_1_15_zujc_1026">We have already encountered a difficult abstract concept in the form of the electric and magnetic fields, and in fact the abstraction needed to merge space and time together is probably less challenging than that.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1027">What we are doing implicitly in speaking of "the distance in time" is treating time as an additional dimension.</span>
+			<span class="sentence" id="dol_1_15_zujc_1028">We are used to the phrase "3-D," as in three-dimensional, referring to the fact that space has three dimensions: up and down; left and right; forward and backward.</span>
+			<span class="sentence" id="dol_1_15_zujc_1029">When we try to add time into the framework, so that we can define distances in spacetime, we are in effect creating a four-dimensional space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1030">To be sure, the time dimension behaves differently than the space dimensions.</span>
+			<span class="sentence" id="dol_1_15_zujc_1031">We have complete freedom of movement in space, whereas we go only one way in time, and time doesn't feel anything like space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1032">But that need not be an insurmountable hurdle.</span>
+			<span class="sentence" id="dol_1_15_zujc_1033">Thinking of time as "just another dimension" is the abstract leap we have to take.</span>
+			<span class="sentence" id="dol_1_15_zujc_1034">The trick, if it sounds too confusing, is to imagine how you might feel if you were a creature that could only ever move forward, backward, left and right.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1035">72</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1036">You have never experienced up and down ï¿½ you live in a flat world.</span>
+			<span class="sentence" id="dol_1_15_zujc_1037">If someone asked you to imagine a third dimension, your flat mind would not be able to grasp it.</span>
+			<span class="sentence" id="dol_1_15_zujc_1038">But if you had a mathematical bent, you might be happy to accept the possibility and, in any case, you could still do the maths even if you couldn't picture the mysterious extra dimension in your mind's eye.</span>
+			<span class="sentence" id="dol_1_15_zujc_1039">Likewise for human beings and four-dimensional space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1040">It should become more natural to think of time as "just another dimension" as our story unfolds.</span>
+			<span class="sentence" id="dol_1_15_zujc_1041">If there is one thing we try to teach our students when they first arrive at the University of Manchester, ready to learn to be physicists, it is that everyone gets confused and stuck.</span>
+			<span class="sentence" id="dol_1_15_zujc_1042">Very few people understand difficult concepts the first time they encounter them, and the way to a deeper understanding is to move forward with small steps.</span>
+			<span class="sentence" id="dol_1_15_zujc_1043">In the words of Douglas Adams: "Don't panic!"</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1044">Let us continue in a gentler vain for a moment by noticing something very simple: Things happen.</span>
+			<span class="sentence" id="dol_1_15_zujc_1045">We wake up, we make breakfast, we eat breakfast, and so on.</span>
+			<span class="sentence" id="dol_1_15_zujc_1046">We'll call the occurrence of a thing "an event in spacetime."</span>
+			<span class="sentence" id="dol_1_15_zujc_1047">We can uniquely describe an event in spacetime by four numbers: three spatial coordinates describing where it happened and a time coordinate describing when it happened.</span>
+			<span class="sentence" id="dol_1_15_zujc_1048">Spatial coordinates can be specified using any old measuring system.</span>
+			<span class="sentence" id="dol_1_15_zujc_1049">For example, longitude, latitude, and altitude will do if the event is occurring in the vicinity of the earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1050">So your coordinates in bed might be 53ï¿½ 28' North, 2ï¿½ 13' West, and 38 meters above sea level.</span>
+			<span class="sentence" id="dol_1_15_zujc_1051">Your time coordinates are specified using a clock (because time is not universal, we'll have to say whose clock in order to be unambiguous) and might be 7 a.m. GMT when your alarm goes off and you wake up.</span>
+		</p>
+		<p>
+		</p><span class="page-normal" id="dol_1_15_zujc_1052">73</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1053">So we have four numbers that uniquely locate any event in spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1054">Notice that there is nothing special about the particular choice of coordinates.</span>
+			<span class="sentence" id="dol_1_15_zujc_1055">In fact, these particular coordinates are measured relative to a line passing through Greenwich in London, England.</span>
+			<span class="sentence" id="dol_1_15_zujc_1056">This convention was agreed upon in October 1884 by twenty-five nations, with the only dissenting voice being San Domingo (France abstained).</span>
+			<span class="sentence" id="dol_1_15_zujc_1057">It is a very important concept that the choice of coordinates should make absolutely no difference.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1058">Let's take the moment when I wake up in bed as our first event in spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1059">The second event could be the event that marks the end of breakfast.</span>
+			<span class="sentence" id="dol_1_15_zujc_1060">We have said that the spatial distance between the two events is 10 meters and the distance in time is 1 hour.</span>
+			<span class="sentence" id="dol_1_15_zujc_1061">To be unambiguous we'd need to say something like "I measured the distance between my bed and my breakfast table using a tape measure whose ends were stretched directly from bed to table" and "I measured the time interval using my bedside clock and the clock sitting in my kitchen."</span>
+			<span class="sentence" id="dol_1_15_zujc_1062">Don't forget that we already know that these two distances, in space and in time, are not universally agreed upon.</span>
+			<span class="sentence" id="dol_1_15_zujc_1063">Someone flying past your house in an aircraft would say that your clock runs slow and the distance between your bed and your breakfast table shrinks.</span>
+			<span class="sentence" id="dol_1_15_zujc_1064">Our aim is to find a distance in spacetime upon which everyone agrees.</span>
+			<span class="sentence" id="dol_1_15_zujc_1065">The million-dollar question is then "how do we take the 10 meters and the 1 hour to construct an invariant distance in spacetime?"</span>
+			<span class="sentence" id="dol_1_15_zujc_1066">We need to tread carefully and, just like in the case of distances on the earth's surface, we shall not assume Euclidean geometry.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1067">If we are to compute distances in spacetime, then we have an immediate problem to resolve.</span>
+			<span class="sentence" id="dol_1_15_zujc_1068">If distance in space is measured in meters and distance in time in seconds, how can we even begin to contemplate combining the two?</span>
+			<span class="sentence" id="dol_1_15_zujc_1069">It is like adding apples and oranges, because they are not the same type of quantity.</span>
+			<span class="sentence" id="dol_1_15_zujc_1070">We can, however, convert distances into times and vice versa if we use the equation we met earlier, v = x/t.</span>
+			<span class="sentence" id="dol_1_15_zujc_1071">With a minuscule bit of algebra we can write time t = x/v, or distance x = vt.</span>
+			<span class="sentence" id="dol_1_15_zujc_1072">In other words, distance and time can be interchanged using something that has the currency of a speed.</span>
+			<span class="sentence" id="dol_1_15_zujc_1073">Let us therefore introduce a calibrating speed; call it c.</span>
+			<span class="sentence" id="dol_1_15_zujc_1074">We can then measure time in meters provided we take any time interval and multiply it by our calibrating speed.</span>
+			<span class="sentence" id="dol_1_15_zujc_1075">At this point in our reasoning c really can be any old speed and we have not committed ourselves at all as to its actual value.</span>
+			<span class="sentence" id="dol_1_15_zujc_1076">Actually, this trick of interchanging time and distance is very common in astronomy, where the distance to stars and galaxies is often measured in light-years, which is the distance light travels in one year.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1077">74</span><br/>
+		<span class="page-normal" id="dol_1_15_zujc_1078">75</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1079">This doesn't seem so strange because we are used to it, but it really is a distance measured in years, which is a unit of time.</span>
+			<span class="sentence" id="dol_1_15_zujc_1080">In the astronomy case, the calibrating speed is the speed of light.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1081">This is progress; we now have time and distance intervals in the same currency.</span>
+			<span class="sentence" id="dol_1_15_zujc_1082">For example, they could both be given in meters, or miles or light-years or whatever.</span>
+			<span class="sentence" id="dol_1_15_zujc_1083">Imagine two events in spacetime, they are a distance x apart in space and a distance ct apart in time.</span>
+			<span class="sentence" id="dol_1_15_zujc_1084">We can represent the distance x as the base of a right-angled triangle, and ct is the height of the triangle.</span>
+			<span class="sentence" id="dol_1_15_zujc_1085">Our goal, is to figure out the length of theï¿½ hypotenuse, s, in terms of x and ct?</span>
+			<span class="sentence" id="dol_1_15_zujc_1086">Making contact with our earlier example x = 10 meters is the distance in space from bed to kitchen table, and t = 1 hour is the distance in time.</span>
+			<span class="sentence" id="dol_1_15_zujc_1087">So far, since c was arbitrary, ct can be anything and we appear to be treading water.</span>
+			<span class="sentence" id="dol_1_15_zujc_1088">We shall press onward nonetheless.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1089">We have to decide on a means of measuring the length of the hypotenuse, the distance between two events in spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1090">Should we choose Euclidean space, in which case we can use Pythagoras' theorem, or something more complicated?</span>
+			<span class="sentence" id="dol_1_15_zujc_1091">Perhaps our space should be curved like the surface of the earth, or maybe some other more complicated shape.</span>
+			<span class="sentence" id="dol_1_15_zujc_1092">There are in fact an infinite number of ways that we might imagine calculating distances.</span>
+			<span class="sentence" id="dol_1_15_zujc_1093">We'll proceed in the way that physicists often do and we will make a guess.</span>
+			<span class="sentence" id="dol_1_15_zujc_1094">Our guess will be guided by a very important and useful principle called Occam's razor, named after the English thinker William of Occam, who lived at the turn of the fourteenth century.</span>
+			<span class="sentence" id="dol_1_15_zujc_1095">The idea is simple to state but surprisingly difficult to implement in everyday life.</span>
+			<span class="sentence" id="dol_1_15_zujc_1096">It might be summarized as "don't overcomplicate things."</span>
+			<span class="sentence" id="dol_1_15_zujc_1097">Occam stated it as "plurality must never be posited without necessity," which does beg the question: Why didn't he pay more attention to his own rule when constructing sentences?</span>
+			<span class="sentence" id="dol_1_15_zujc_1098">However it is stated, Occam's razor is very powerful, even brutal, when applied to reasoning about the natural world.</span>
+			<span class="sentence" id="dol_1_15_zujc_1099">It really says that the simplest hypothesis should be tried first, and only if this fails should we add complication bit by bit until the hypothesis fits the experimental evidence.</span>
+			<span class="sentence" id="dol_1_15_zujc_1100">In our case, the simplest way to construct a distance is to assume that at least the space part of our spacetime should be Euclidean; in other words, space is flat.</span>
+			<span class="sentence" id="dol_1_15_zujc_1101">This means that the familiar way of working out the distance in space between objects in the room in which we are seated reading this book is carried over into our new framework intact.</span>
+			<span class="sentence" id="dol_1_15_zujc_1102">What could be simpler?</span>
+			<span class="sentence" id="dol_1_15_zujc_1103">The question, then, is how we should add time.</span>
+			<span class="sentence" id="dol_1_15_zujc_1104">Another simplifying assumption is that our spacetime is unchanging and the same everywhere.</span>
+			<span class="sentence" id="dol_1_15_zujc_1105">These are important assumptions.</span>
+			<span class="sentence" id="dol_1_15_zujc_1106">In fact, Einstein did eventually relax them and doing so allowed him to contemplate the mind- (and space-) bending possibility that spacetime could be constantly changed by the presence of matter and energy.</span>
+			<span class="sentence" id="dol_1_15_zujc_1107">It led to his general theory of relativity, which is to this day our best theory of gravity.</span>
+			<span class="sentence" id="dol_1_15_zujc_1108">We will meet general relativity in the final chapter, but for the moment we can ignore all these twists and turns.</span>
+			<span class="sentence" id="dol_1_15_zujc_1109">Once we follow Occam and make these two simplifying assumptions, we are left with only two possible choices as to how to calculate distances in spacetime.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1110">76</span><br/>
+		<span class="page-normal" id="dol_1_15_zujc_1111">77</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1112">The length of the hypotenuse <i>must</i> be either s<sup>2</sup> = (ct)<sup>2</sup> + x<sup>2</sup> or s<sup>2</sup> = (ct)<sup>2</sup> - x<sup>2</sup>.</span>
+			<span class="sentence" id="dol_1_15_zujc_1113">There is no other option.</span>
+			<span class="sentence" id="dol_1_15_zujc_1114">Although we did not prove it, our assumption that spacetime should be unchanging and the same everywhere leads to only these two possibilities and we must pick either the plus sign or the minus sign.</span>
+			<span class="sentence" id="dol_1_15_zujc_1115">Of course, proof or no proof, we can be pragmatic and see what happens when we try each one on for size.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1116">Flipping the sign means that the mathematics is not much of an extension over the by now familiar equation of Pythagoras.</span>
+			<span class="sentence" id="dol_1_15_zujc_1117">Our task is to figure out whether we should stick with the plus-sign version of Pythagoras, or shift to the minus-sign version of the distance equation.</span>
+			<span class="sentence" id="dol_1_15_zujc_1118">This may look at first sight to be a rather odd thing to investigate.</span>
+			<span class="sentence" id="dol_1_15_zujc_1119">What possible reason could there be for even considering Pythagoras with a minus sign?</span>
+			<span class="sentence" id="dol_1_15_zujc_1120">But that is not the right way to think about things.</span>
+			<span class="sentence" id="dol_1_15_zujc_1121">The formula for distances on a sphere looks nothing like Pythagoras either, so all we are doing is entertaining the idea that spacetime might not be flat in the sense of Euclid.</span>
+			<span class="sentence" id="dol_1_15_zujc_1122">Indeed, since the minus-sign version is the only option other than the plus-sign version (given our assumptions), we have no logical reason to throw it out at this stage.</span>
+			<span class="sentence" id="dol_1_15_zujc_1123">We should therefore keep it and investigate the consequences.</span>
+			<span class="sentence" id="dol_1_15_zujc_1124">If neither the plus ï¿½ nor the minus-sign versions do the job, and we fail in constructing a workable distance measure in spacetime, then we must go back to the drawing board.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1125">We are now about to plunge into a very elegant but perhaps tricky piece of reasoning.</span>
+			<span class="sentence" id="dol_1_15_zujc_1126">We will stick to our promise of using nothing more complicated than Pythagoras, but you might find that you need to listen to it twice.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1127">78</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1128">It should be worth it, because if you follow closely you might experience a feeling described by biologist Edward O. Wilson as the Ionian Enchantment.</span>
+			<span class="sentence" id="dol_1_15_zujc_1129">It derives from the work of Thales of Miletus, who is credited by Aristotle, two centuries later, as laying the foundations of the physical sciences in Ionia in the sixth century BCE.</span>
+			<span class="sentence" id="dol_1_15_zujc_1130">This poetic term describes the belief that the complexity of the world can be explained by a small number of simple natural laws because at its heart it is orderly and simple (we are reminded of Wigner's essay).</span>
+			<span class="sentence" id="dol_1_15_zujc_1131">The scientist's job is to strip away the complexity we see around us and to uncover this underlying simplicity.</span>
+			<span class="sentence" id="dol_1_15_zujc_1132">When the process works out, and the simplicity and unity of the world are revealed, we experience the Ionian Enchantment.</span>
+			<span class="sentence" id="dol_1_15_zujc_1133">Imagine for a moment cradling a snowflake in the palm of your hand.</span>
+			<span class="sentence" id="dol_1_15_zujc_1134">It is an elegant and beautiful structure, possessed of a jagged crystalline symmetry.</span>
+			<span class="sentence" id="dol_1_15_zujc_1135">No two snowflakes are alike, and at first sight this chaotic state of affairs seems to defy a simple explanation.</span>
+			<span class="sentence" id="dol_1_15_zujc_1136">Science has taught us that the apparent complexity of snowflakes hides an exquisite underlying simplicity; each is a configuration of billions of molecules of water, H<sub>2</sub>O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1137">There is nothing more to a snowflake than that, and yet an overwhelming complex of structure and form emerges when those H<sub>2</sub>O molecules get together in the atmosphere of our planet on a cold winter's night.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1138">To settle the question of the plus or minus sign, we need to turn our attention to causality.</span>
+			<span class="sentence" id="dol_1_15_zujc_1139">Let us first suppose that Pythagoras' is the right equation for distances in spacetime ï¿½ i.e., s<sup>2</sup> = (ct)<sup>2</sup> + x<sup>2</sup>.</span>
+			<span class="sentence" id="dol_1_15_zujc_1140">Yet again we return to our two events: waking up in bed at 7 a.m. and finishing breakfast in the kitchen at 8 a.m.</span>
+			<span class="sentence" id="dol_1_15_zujc_1141">We'll do something that may send shivers up your spine as you remember sitting in mathematics classes at school and gazing out the window across the football fields, pristine and inviting in the spring afternoon sunlight ï¿½ let the waking-up event be called O and the finishing-breakfast event be called A.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1142">79</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1143">We do this purely for reasons of brevity, without wishing to don tweed and cover ourselves in chalk dust.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1144">We know that the spatial distance between O and A is x = 10 meters and the distance in time between the two events is t = 1 hour, where x and t are measured by me.</span>
+			<span class="sentence" id="dol_1_15_zujc_1145">We haven't decided what c is yet, but when we do we will know ct and we can then go ahead and use the distance equation to calculate s, the distance in spacetime between events O and A.</span>
+			<span class="sentence" id="dol_1_15_zujc_1146">Our hypothesis is that while x and t can and will be different if they are measured by someone flying past at close to the speed of light, the distance s will stay the same.</span>
+			<span class="sentence" id="dol_1_15_zujc_1147">In other words, x and t can and will change but they must change in such a way that s never changes.</span>
+			<span class="sentence" id="dol_1_15_zujc_1148">To risk overemphasizing the point, we want to remind you that our goal is always to build the laws of physics using invariant objects in spacetime and the distance s is just such an object.</span>
+			<span class="sentence" id="dol_1_15_zujc_1149">If that sounds too abstract, then we can say it again but this time using less mathematically fancy language: Nature's rules must express relationships between real things, and those things live in spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1150">A thing living in spacetime is akin to an object sitting in a room.</span>
+			<span class="sentence" id="dol_1_15_zujc_1151">Spacetime (or the room) is the arena in which the thing lives.</span>
+			<span class="sentence" id="dol_1_15_zujc_1152">The nature of real things is not a matter of opinion and in that sense we say they are invariant.</span>
+			<span class="sentence" id="dol_1_15_zujc_1153">A three-dimensional example of something that is not an invariant might be the flickering shadow of an object sitting in a room illuminated by a warming fire.</span>
+			<span class="sentence" id="dol_1_15_zujc_1154">Clearly the shadow varies depending on how the fire is burning and where the fire is but we are never in any doubt that a real, unvarying object is responsible for it.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1155">80</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1156">Using spacetime, our plan is to lift physics out of the shadows and hunt down relationships between real objects.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1157">The fact that two different observers can disagree on the values of x and t, provided s is the same, has a very important consequence, which can be visualized quite simply.</span>
+			<span class="sentence" id="dol_1_15_zujc_1158">Imagine a circle in spacetime of radius s that is centered on a point O, which represents the waking-up event.</span>
+			<span class="sentence" id="dol_1_15_zujc_1159">Because we are, for the moment, using the Pythagorean form of the distance equation, every point on the circumference of the circle is the same distance s away from O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1160">This is a pretty obvious statement: The distance s is the radius of the circle.</span>
+			<span class="sentence" id="dol_1_15_zujc_1161">Points outside the circle are farther away from O while points inside are closer to O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1162">But our hypothesis is that s is the distance in spacetime between events O and A.</span>
+			<span class="sentence" id="dol_1_15_zujc_1163">In other words, the event A could lie anywhere on the circumference of the circle and still be a distance s in spacetime from O.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1164">81</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1165">At what point on the circle should event A lie?</span>
+			<span class="sentence" id="dol_1_15_zujc_1166">That depends on who is measuring x and t.</span>
+			<span class="sentence" id="dol_1_15_zujc_1167">For me in the house, we know exactly where it should be since x = 10 meters and t = 1 hour.</span>
+			<span class="sentence" id="dol_1_15_zujc_1168">Since t is positive, we are to picture A as lying on the upper half of the circle centred on O, that is it lies in the future of O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1169">For a person flying past in a highspeed rocket, the distance x in space and the distance t in time will change, but if s is to remain the same, then the event must <i>still</i> lie somewhere on the circle.</span>
+			<span class="sentence" id="dol_1_15_zujc_1170">So different observers record different positions in space and time separately for the same event, but subject to the constraint that we only slide the point around on the circle.</span>
+			<span class="sentence" id="dol_1_15_zujc_1171">Now, something very dramatic can happen.</span>
+			<span class="sentence" id="dol_1_15_zujc_1172">We can slide event A all the way around the circle, so that it lies somewhere on the lower-half of the circle.</span>
+			<span class="sentence" id="dol_1_15_zujc_1173">That means that according to some other observer, event A could occur before event O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1174">This is a world where you finish your breakfast before you wake up!</span>
+			<span class="sentence" id="dol_1_15_zujc_1175">Such a circumstance is a clear violation of our cherished axiom of causality.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1176">82</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1177">We have discovered that the requirement of causality is intimately related to the way that we define the distance in spacetime, and the simple Pythagorean definition with the plus sign is no good.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1178">We are faced with what the English biologist Thomas Henry Huxley famously described as "the great tragedy of science ï¿½ the slaying of a beautiful hypothesis by an ugly fact."</span>
+			<span class="sentence" id="dol_1_15_zujc_1179">Huxley, known as Darwin's bulldog for his sterling defense of evolution, was once asked by William Wilberforce whether it was from his grandfather or grandmother that he claimed his descent from a monkey.</span>
+			<span class="sentence" id="dol_1_15_zujc_1180">Huxley is said to have replied that he would not be ashamed to have a monkey for his ancestor, but he would be ashamed to be connected with a man who used his great gifts to obscure the truth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1181">The tragic truth in our case is that we must reject the simplest hypothesis if we are to preserve causality, and move on to something a little more complicated.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1182">Our next and in fact only remaining hypothesis is that the distance between points in spacetime is to be calculated using s<sup>2</sup> = (ct)<sup>2</sup> - x<sup>2</sup>.</span>
+			<span class="sentence" id="dol_1_15_zujc_1183">In contrast to the plus-sign version, this is a world where Euclidean geometry does not apply, as in the case of geometry on the surface of the earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1184">Mathematicians have a name for a space in which the distance between two points is governed by this equation: It is called hyperbolic space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1185">Physicists have a different name for it.</span>
+			<span class="sentence" id="dol_1_15_zujc_1186">They call it Minkowski space-time.</span>
+			<span class="sentence" id="dol_1_15_zujc_1187">The listener might take this to be a clue that we are on the right track!</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1188">83</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1189">Our top priority must be to establish whether Minkowski spacetime violates the demands of causality.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1190">To answer this question we need once again to take a look at the lines in spacetime that lie a constant distance s from O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1191">That is, we want to consider the analogue of the circles in Euclidean spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1192">The minus sign makes all the difference.</span>
+			<span class="sentence" id="dol_1_15_zujc_1193">Let's start with the same old events, O and A, all points in spacetime that lie the same distance from O as A does, no longer lie on a cricle centred on O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1194">Instead they lie on a curve known to mathematicians as a hyperbola.</span>
+			<span class="sentence" id="dol_1_15_zujc_1195">Mathematically speaking, all the points on the curve satisfy our distance equation ï¿½ i.e., s<sup>2</sup> = (ct)<sup>2</sup> - x<sup>2</sup>.</span>
+			<span class="sentence" id="dol_1_15_zujc_1196">The curve has the crucial property that it never crosses from O's past into O's future, unlike the circle.</span>
+			<span class="sentence" id="dol_1_15_zujc_1197">Now the situation as viewed by observers in rocket ships is completely different from the plus-sign version because event A always stays in the future of event O.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1198">84</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1199">We can slide A around but never into O's past.</span>
+			<span class="sentence" id="dol_1_15_zujc_1200">In other words, everyone agrees that we wake up before we finish our breakfast.</span>
+			<span class="sentence" id="dol_1_15_zujc_1201">We can breathe a sigh of relief: Causality is not violated in Minkowski spacetime.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1202">It's worth repeating this because it is one of the most important points in the book.</span>
+			<span class="sentence" id="dol_1_15_zujc_1203">If we decide to define the distance in spacetime between the two events O and A using Pythagoras' equation but with a minus sign, then no matter how anyone views the two events, A never crosses into O's past.</span>
+			<span class="sentence" id="dol_1_15_zujc_1204">This means that if event A is in O's future according to one observer, then every other observer will also agree that A is in O's future too.</span>
+			<span class="sentence" id="dol_1_15_zujc_1205">Because the hyperbola never ever crosses into O's past, everyone agrees that eating breakfast comes after waking up.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1206">We've just completed a subtle piece of reasoning.</span>
+			<span class="sentence" id="dol_1_15_zujc_1207">It certainly does not mean that we are correct in our original hypothesis that there should be an "invariant" distance in spacetime that is agreed upon by all observers.</span>
+			<span class="sentence" id="dol_1_15_zujc_1208">What it does mean, though, is that our hypothesis has survived an important test ï¿½ it has survived the demands of the requirement of causality.</span>
+			<span class="sentence" id="dol_1_15_zujc_1209">We are not finished, however, because we are not just playing around with mathematics.</span>
+			<span class="sentence" id="dol_1_15_zujc_1210">We are physicists, and we are trying to construct a theory that describes how the world works.</span>
+			<span class="sentence" id="dol_1_15_zujc_1211">The ultimate and decisive test of our theory will be whether it can produce predictions that agree with experiment, and we are not yet ready to make a prediction, because we don't know what the calibrating speed c is.</span>
+			<span class="sentence" id="dol_1_15_zujc_1212">Without a number, we simply can't do the sums.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1213">Remember, we needed c in order to have any chance of defining the notion of distance in spacetime, because we had to measure space and time in the same currency, but so far we have no idea what it actually represents.</span>
+			<span class="sentence" id="dol_1_15_zujc_1214">Is it the speed of anything interesting?</span>
+			<span class="sentence" id="dol_1_15_zujc_1215">The key to the answer lies in an intriguing property of the Minkowski spacetime we have just constructed.</span>
+			<span class="sentence" id="dol_1_15_zujc_1216">The hyperbolic curve on which A lies has one further important property, the curve sits entirely in a region sandwiched between two 45 degree lines heading out from O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1217">Those lines at 45 degrees are important for the following reason.</span>
+			<span class="sentence" id="dol_1_15_zujc_1218">Apart from curves, like the one containing A, there are other curves of constant spacetime distance from O that do cross from O's future to O's past.</span>
+			<span class="sentence" id="dol_1_15_zujc_1219">They lie outside the region in which the curve containing A is sandwiched.</span>
+			<span class="sentence" id="dol_1_15_zujc_1220">An example of an event lying on such a curve would be one that occured simultaneously with O, that is at the same time as the waking up event.</span>
+			<span class="sentence" id="dol_1_15_zujc_1221">For such an event, different observers would determine that the event is no longer simultaneous with O, and worse still, depending on how they are moving, the event could lie either in O's past or in O's future.</span>
+			<span class="sentence" id="dol_1_15_zujc_1222">This is a little bit worrying because these curves switch past and future, just as happened in the Pythagorean version of the equation.</span>
+			<span class="sentence" id="dol_1_15_zujc_1223">In that case, this led us to reject the hypothesis because it meant that causality was violated.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1224">85</span><br/>
+		<span class="page-normal" id="dol_1_15_zujc_1225">86</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1226">Are we in the same boat with the minus-sign version of hyperbolic spacetime?</span>
+			<span class="sentence" id="dol_1_15_zujc_1227">Are we sunk?</span>
+			<span class="sentence" id="dol_1_15_zujc_1228">Well, no, there is a way out.</span>
+			<span class="sentence" id="dol_1_15_zujc_1229">Let us imagine a event B sitting in the troubling region.</span>
+			<span class="sentence" id="dol_1_15_zujc_1230">For this event, is possible for some observers to consider event B as occurring in O's future, while for others it is in O's past.</span>
+			<span class="sentence" id="dol_1_15_zujc_1231">Don't forget: Every observer must agree on the spacetime distance between events even if they do not agree on the distances in space and time separately, and that means we can slide B around on the curve of constant spacetime distance from O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1232">It looks like a breakdown of causality, but fortunately that is very definitely not the case.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1233">How are we to restore causality to our theory of spacetime?</span>
+			<span class="sentence" id="dol_1_15_zujc_1234">To answer this question, we need to think a little more carefully about what we mean by causality.</span>
+			<span class="sentence" id="dol_1_15_zujc_1235">This next piece will involve rocket ships and lasers, so if the abstract reasoning of the previous sections has left you drained, then you can relax for a while.</span>
+			<span class="sentence" id="dol_1_15_zujc_1236">Let's think about event O again: waking up in bed in the morning.</span>
+			<span class="sentence" id="dol_1_15_zujc_1237">To be a little more precise, the event could correspond to my alarm clock going off.</span>
+			<span class="sentence" id="dol_1_15_zujc_1238">Shortly beforehand, on a planet in the Alpha Centauri system, the nearest star system to Earth at a distance of just over 4 light-years, a spaceship lifts off and heads toward Earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1239">Must everyone agree that the spaceship started its journey before I woke up?</span>
+			<span class="sentence" id="dol_1_15_zujc_1240">From the point of view of causality the issue depends critically upon whether information can travel infinitely fast or not.</span>
+			<span class="sentence" id="dol_1_15_zujc_1241">If information can travel infinitely fast, then the alien spaceship might conceivably be able to fire a laser beam that travels in an instant to the earth and destroys my alarm clock.</span>
+			<span class="sentence" id="dol_1_15_zujc_1242">The result is that I oversleep and miss breakfast.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1243">87</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1244">Missing breakfast might be the least worrying issue given this particular scenario, but we are doing a thought experiment, so let us ignore the emotional consequences of having our alarm clock vaporized by an alien laser and continue.</span>
+			<span class="sentence" id="dol_1_15_zujc_1245">The firing of the spaceship's laser caused me to miss breakfast, and therefore the ordering cannot be swapped without violating our doctrine of the protection of causality.</span>
+			<span class="sentence" id="dol_1_15_zujc_1246">This is easy to see because if some observer were able to conclude that the spaceship took off after I woke up, then we would have a contradiction because I cannot oversleep if I have already woken up.</span>
+			<span class="sentence" id="dol_1_15_zujc_1247">We are forced to conclude that if information can travel at arbitrarily high speeds, then it can <i>never</i> be permissible to switch the time ordering of any two events without violating the law of cause and effect.</span>
+			<span class="sentence" id="dol_1_15_zujc_1248">But there is a loophole in our reasoning that permits the time ordering of certain pairs of events to be flipped, but only if they lie outside the 45-degree lines that delineate the curve containing A from the "dangerous", potentially causality-violating curve B.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1249">Let us imagine the alien-laser-exploding-alarm-clock incident again, but now subject it to a cosmic speed limit.</span>
+			<span class="sentence" id="dol_1_15_zujc_1250">That is to say, we will not allow the laser beam to travel infinitely fast from the spaceship to our alarm clock.</span>
+			<span class="sentence" id="dol_1_15_zujc_1251">Covering ourselves in a thin mist of chalk dust for the last time, we call the laser-firing event B.</span>
+			<span class="sentence" id="dol_1_15_zujc_1252">If the spaceship fired the laser (event B) very shortly before the alarm clock-ringing event O, from a very great distance away, then there is no way the spaceship could possibly prevent me from waking up because the laser beam simply hasn't got enough time to travel from the ship to my clock.</span>
+			<span class="sentence" id="dol_1_15_zujc_1253">This must be the case if the laser beam is constrained to travel at or below some kind of cosmic speed limit.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1254">88</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1255">If this is the situation, the events O and B are said to be causally disconnected.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1256">We are supposing that B happens just before O such that it lies in the "dangerous" region for causality.</span>
+			<span class="sentence" id="dol_1_15_zujc_1257">Different observers will generally disagree on whether B happens before or after O, because their different points of view correspond to moving B around on the hyperbola, which crosses from the future to the past.</span>
+			<span class="sentence" id="dol_1_15_zujc_1258">This is unavoidable, but cause and effect can still be protected if there is absolutely no way that event B can influence event O.</span>
+			<span class="sentence" id="dol_1_15_zujc_1259">In other words, who cares whether B happened in O's past or future, if it makes no difference to anything because B and O cannot influence each other?</span>
+			<span class="sentence" id="dol_1_15_zujc_1260">There are four distinct regions in Minkowski spacetime, separated from each other by the 45-degree lines.</span>
+			<span class="sentence" id="dol_1_15_zujc_1261">If we are to protect causality, then any event that occurs in either of the would be causality-violating regions must never be able to send a signal that can possibly reach O.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1262">The delineating 45 degree lines are obviously very important.</span>
+			<span class="sentence" id="dol_1_15_zujc_1263">They correspond to events that have a distance in space from O that is equal to the distance in time (ct).</span>
+			<span class="sentence" id="dol_1_15_zujc_1264">How fast must a signal travel from O if it is to influence an event lying exactly on the 45-degree line?</span>
+			<span class="sentence" id="dol_1_15_zujc_1265">Well, if the event is 1 second in O's future, then the signal must travel a distance c ï¿½ 1 second.</span>
+			<span class="sentence" id="dol_1_15_zujc_1266">If it's 2 seconds in the future, then it must travel a distance c ï¿½ 2 seconds.</span>
+			<span class="sentence" id="dol_1_15_zujc_1267">In other words, it must travel at the speed c.</span>
+			<span class="sentence" id="dol_1_15_zujc_1268">For a signal to travel between B and O, therefore, it must travel faster than the speed c.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1269">89</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1270">Conversely, for any events that lie between the 45-degree lines but in the upper and lower wedges, it is possible to communicate between them and the event at O using signals that travel at speeds slower than c.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1271">We have finally managed to interpret the speed c: It is the cosmic speed limit.</span>
+			<span class="sentence" id="dol_1_15_zujc_1272">Nothing can travel faster than c because if it did it could be used to transmit information that could violate the principle of cause and effect.</span>
+			<span class="sentence" id="dol_1_15_zujc_1273">Notice also that if everyone is to agree on the distance in spacetime between any two events, then they must also agree that the cosmic speed limit is c, regardless of how they are moving around in spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1274">The speed c therefore has an additional interesting property: No matter how two different observers are moving, they must always measure c to be the same.</span>
+			<span class="sentence" id="dol_1_15_zujc_1275">The speed c is beginning to look a lot like another special speed we have encountered in this book: the speed of light, but we haven't proved the connection yet.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1276">Our original conjecture is still very much alive.</span>
+			<span class="sentence" id="dol_1_15_zujc_1277">We have managed to build a theory of space and time that looks capable of reproducing the physics we met in the last chapter.</span>
+			<span class="sentence" id="dol_1_15_zujc_1278">Certainly, the existence of a universal speed limit offers promise, especially if we can interpret it as the speed of light.</span>
+			<span class="sentence" id="dol_1_15_zujc_1279">We also have a space-time in which space and time are no longer absolutes.</span>
+			<span class="sentence" id="dol_1_15_zujc_1280">They have been sacrificed in favor of absolute spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1281">To convince ourselves that we have constructed a possible description of the world, let's see if we can obtain the slowing down of moving clocks that we met in Chapter 3.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1282">Imagine that you are back on the proverbial train, sitting down in a carriage wearing a wristwatch.</span>
+			<span class="sentence" id="dol_1_15_zujc_1283">For you, it is convenient to measure distances relative to your own position and times using your wristwatch.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1284">90</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1285">Your train journey takes two hours from station to station.</span>
+			<span class="sentence" id="dol_1_15_zujc_1286">Since you never leave your seat throughout the journey, you have traveled a distance x = 0.</span>
+			<span class="sentence" id="dol_1_15_zujc_1287">This is the principle we established right at the start of the book.</span>
+			<span class="sentence" id="dol_1_15_zujc_1288">It is not possible to define who is moving and who is standing still, and therefore it is perfectly acceptable for you, seated on a train, to decide that you are not moving.</span>
+			<span class="sentence" id="dol_1_15_zujc_1289">In this case, only time passes.</span>
+			<span class="sentence" id="dol_1_15_zujc_1290">Since your journey takes two hours, then, from your perspective, you have traveled only in time.</span>
+			<span class="sentence" id="dol_1_15_zujc_1291">In spacetime, therefore, you have traveled distance s given by s = ct where t = 2 hours (because the distance in space as measured by you is x = 0).</span>
+			<span class="sentence" id="dol_1_15_zujc_1292">That is all straightforward.</span>
+			<span class="sentence" id="dol_1_15_zujc_1293">Now consider your journey from the standpoint of your friend, who is not on the train but who instead is sitting on the ground somewhere (it does not matter where he actually is, just that he is at rest relative to the earth while you are whizzing by on the train).</span>
+			<span class="sentence" id="dol_1_15_zujc_1294">Your friend would prefer to measure times using his own wristwatch and distances relative to himself.</span>
+			<span class="sentence" id="dol_1_15_zujc_1295">To simplify things a little bit, let us suppose your train journey is on a perfectly straight track.</span>
+			<span class="sentence" id="dol_1_15_zujc_1296">If you travel for 2 hours at a speed of v = 100 miles per hour, then your friend notes that, at the end of the journey, you have traveled a distance X = vT.</span>
+			<span class="sentence" id="dol_1_15_zujc_1297">We are using capital letters when we talk about distances or times measured by your friend in order to distinguish them from the corresponding quantities measured by you (i.e., x = 0 and t = 2 hours).</span>
+			<span class="sentence" id="dol_1_15_zujc_1298">So, according to your friend, you have traveled a spacetime distance s given by s<sup>2</sup> = (cT)<sup>2</sup> - (vT)<sup>2</sup>.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1299">Here is the crucial part of the whole argument: You must both agree on the spacetime distance of your journey.</span>
+			<span class="sentence" id="dol_1_15_zujc_1300">According to your measurements, you did not move (x = 0) and your journey took 2 hours (t = 2 hours), while your friend says that you have traveled a distance of vT (where v = 100 miles per hour) and your journey takes a time T.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1301">91</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1302">Well, we are obliged to equate the corresponding distances in spacetime and so (ct)<sup>2</sup> = (cT)<sup>2</sup> - (vT)<sup>2</sup>.</span>
+			<span class="sentence" id="dol_1_15_zujc_1303">This formula can be jiggled around to give us T = ct/v(c<sup>2</sup> - v<sup>2</sup>).</span>
+			<span class="sentence" id="dol_1_15_zujc_1304">So, although your wristwatch registers that your journey lasted for 2 hours, according to your friend your journey lasted a little longer.</span>
+			<span class="sentence" id="dol_1_15_zujc_1305">The enhancement factor is equal to c/v(c<sup>2</sup> - v<sup>2</sup>) = 1/v(1 ï¿½ v<sup>2</sup>/c<sup>2</sup>), which is exactly what we got in the last chapter but only if we interpret c as the speed of light.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1306">Are you beginning to feel the Ionian Enchantment?</span>
+			<span class="sentence" id="dol_1_15_zujc_1307">We have deduced the same formula that emerged from thinking about light clocks and triangles in the previous chapter.</span>
+			<span class="sentence" id="dol_1_15_zujc_1308">Then, we were motivated to think about light clocks because Maxwell's brilliant synthesis of the experimental results of Faraday and others strongly suggested that the speed of light should be the same for all observers.</span>
+			<span class="sentence" id="dol_1_15_zujc_1309">This conclusion was supported by the experimental work of Michelson and Morley, and taken at face value by Einstein.</span>
+			<span class="sentence" id="dol_1_15_zujc_1310">In this chapter we arrived at exactly the same conclusion but with no reference to history or experiment.</span>
+			<span class="sentence" id="dol_1_15_zujc_1311">We didn't even need to give light a special role.</span>
+			<span class="sentence" id="dol_1_15_zujc_1312">Instead, we introduced space-time and, as a result, insisted that there should exist the notion of an invariant distance between events.</span>
+			<span class="sentence" id="dol_1_15_zujc_1313">On top of that we demanded that cause and effect be respected.</span>
+			<span class="sentence" id="dol_1_15_zujc_1314">We then constructed the simplest possible distance measure and remarkably arrived at the same answer as Einstein.</span>
+			<span class="sentence" id="dol_1_15_zujc_1315">This reasoning is perhaps one of the most beautiful examples of the unreasonable effectiveness of mathematics in the physical sciences.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1316">92</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1317">Thales would be so enchanted that he would already be reclining in a bath of asses' milk having been scrubbed by eunuchs.</span>
+			<span class="sentence" id="dol_1_15_zujc_1318">For his concubines to enter his bathroom carrying wine and figs, all we have to do is establish that c must be the speed of light using an argument that is entirely independent of the historical reasoning we encountered in the last chapter.</span>
+			<span class="sentence" id="dol_1_15_zujc_1319">That climax will arrive in the next chapter, for now we can take a rest from the maths, leave Thales poised in anticipation, and revel in the fact that we have succeeded in uncovering a whole new way of thinking about Einstein's theory.</span>
+			<span class="sentence" id="dol_1_15_zujc_1320">Spacetime really does seem to work ï¿½ the notion of a unified space and time makes sense, just as Minkowski said.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1321">How are we to picture spacetime?</span>
+			<span class="sentence" id="dol_1_15_zujc_1322">Real spacetime is four-dimensional but the four-dimensional nature poses a stumbling block to our imagination, because human brains cannot directly picture objects in higher than three dimensions.</span>
+			<span class="sentence" id="dol_1_15_zujc_1323">In addition, the fact that time makes up one of the dimensions just sounds plain weird.</span>
+			<span class="sentence" id="dol_1_15_zujc_1324">A picture that might help make it all a little less mystical is to imagine a motorcycle roaming over an undulating countryside.</span>
+			<span class="sentence" id="dol_1_15_zujc_1325">Roads criss-cross the landscape, allowing our motorcyclist to wander this way and that.</span>
+			<span class="sentence" id="dol_1_15_zujc_1326">Spacetime is rather like the rolling countryside.</span>
+			<span class="sentence" id="dol_1_15_zujc_1327">The analogue of our motorcyclist traveling due north might be an object moving only in the time direction through spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1328">In other words, the object would be stationary in space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1329">Of course, statements like "stationary in space" are subjective and so it is to be understood that the identification of "due north" with "the time direction" implies a particular point of view, but that is okay; we just need to bear it in mind.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1330">93</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1331">Now, the roads criss-crossing the spacetime landscape are all restricted to lie within a bearing of 45 degrees of north; roads due east and west are disallowed because to travel along them our spacetime "motorcyclist" would have to exceed the cosmic speed limit through space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1332">Think of it this way: If the motorcyclist could travel due east, then he could go as far as he wanted in the easterly direction without any time passing at all, because he would not travel any distance up the northerly time direction.</span>
+			<span class="sentence" id="dol_1_15_zujc_1333">This would correspond to an infinite speed through space; he would get from a to b instantaneously.</span>
+			<span class="sentence" id="dol_1_15_zujc_1334">The roads have therefore been built so that the motorcyclist cannot travel too fast in an easterly or westerly direction.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1335">The analogy can be pushed even further.</span>
+			<span class="sentence" id="dol_1_15_zujc_1336">We will very soon show that everything moves over spacetime at the same speed.</span>
+			<span class="sentence" id="dol_1_15_zujc_1337">It is just as if our motorcyclist has a device that fixes the throttle on his bike so that he always travels at the same speed over the spacetime landscape.</span>
+			<span class="sentence" id="dol_1_15_zujc_1338">We do need to be a little bit careful here, for when we talk about a speed in spacetime, it is not the same as a speed through space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1339">A speed through space can be anything provided it does not exceed the cosmic speed limit ï¿½ e.g., our motorcyclist might take a road close to a bearing of northeast, and in doing so he would be pushing as close to the cosmic speed limit as he could.</span>
+			<span class="sentence" id="dol_1_15_zujc_1340">In contrast, a road bearing close to due north would not lead to much movement east or west and consequently a journey that is well within the speed limit.</span>
+			<span class="sentence" id="dol_1_15_zujc_1341">The statement that everything moves at the same speed through spacetime sounds rather profound and perhaps a little baffling.</span>
+			<span class="sentence" id="dol_1_15_zujc_1342">It means that as you sit listening to this book you are whizzing over the spacetime landscape at exactly the same speed as everything else in the universe.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1343">94</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1344">Viewed like that, motion through space is a shadow of a more universal motion through spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1345">In a very real sense, as we will now show, you are exactly like the motorcyclist with the fixed throttle.</span>
+			<span class="sentence" id="dol_1_15_zujc_1346">You are moving over the spacetime landscape with your throttle fixed open as you listen to this book.</span>
+			<span class="sentence" id="dol_1_15_zujc_1347">Because you are sitting still, your journey is entirely up the northerly time road.</span>
+			<span class="sentence" id="dol_1_15_zujc_1348">If you glance at your watch, you'll see the distance in time ticking by.</span>
+			<span class="sentence" id="dol_1_15_zujc_1349">This is a very strange-sounding claim, so let's go through it carefully.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1350">Why does everything move at the same speed through space-time?</span>
+			<span class="sentence" id="dol_1_15_zujc_1351">Consider our motorcyclist again and imagine 1 second passes according to the watch on his wrist.</span>
+			<span class="sentence" id="dol_1_15_zujc_1352">In that time, he will have traveled through spacetime by a certain distance.</span>
+			<span class="sentence" id="dol_1_15_zujc_1353">But everyone must agree on how far that distance is, because distances in spacetime are universal and not a matter for debate.</span>
+			<span class="sentence" id="dol_1_15_zujc_1354">That means we can ask the motorcyclist how far he thinks he has traveled over the spacetime landscape and the answer he gives will be the right answer.</span>
+			<span class="sentence" id="dol_1_15_zujc_1355">Now, the motorcyclist can choose to calculate distances in spacetime relative to himself, and from this point of view he has not moved in space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1356">It is just like the person sitting on the airplane in Chapter 1 who doesn't stray from her airplane seat and who therefore states that she has not moved.</span>
+			<span class="sentence" id="dol_1_15_zujc_1357">She may have moved relative to someone else ï¿½ for example, someone standing on the ground watching the plane fly by ï¿½ but that is not the point.</span>
+			<span class="sentence" id="dol_1_15_zujc_1358">So from our motorcyclist's point of view, he has not moved in space and yet 1 second in time has passed.</span>
+			<span class="sentence" id="dol_1_15_zujc_1359">He can therefore use the spacetime distance equation s<sup>2</sup> = (ct)<sup>2</sup> - x<sup>2</sup> with x = 0 (because he hasn't moved in space) and t = 1 second to figure out how far in spacetime he has actually traveled: The answer is a distance equal to c multiplied by 1 second.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1360">95</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1361">So the motorcyclist tells us that he is traveling a distance of c (multiplied by 1 second) for every second that passes on his watch, and that is just another way of saying that his speed through spacetime is equal to c.</span>
+			<span class="sentence" id="dol_1_15_zujc_1362">If you have been following closely, then you might object that the passage of 1 second was measured on the motorcyclist's wristwatch and that a different amount of time will pass according to someone else who is moving relative to the motorcyclist.</span>
+			<span class="sentence" id="dol_1_15_zujc_1363">That is true enough, but there is something special about the motorcyclist's watch, because the motorcyclist does not move relative to himself (a trivial statement).</span>
+			<span class="sentence" id="dol_1_15_zujc_1364">We are therefore free to put x = 0 in the distance equation and so the time that passes on his wristwatch is a direct way to measure the spacetime distance s.</span>
+			<span class="sentence" id="dol_1_15_zujc_1365">This is a nice result: The time that passes on the motorcyclist's watch is equal to the spacetime distance traveled divided by c.</span>
+			<span class="sentence" id="dol_1_15_zujc_1366">In a sense, his watch is a device for measuring distances in spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1367">Since both the spacetime distance and c are agreed upon by everyone, it follows that the motorcyclist has unwittingly used his watch to measure something that everyone can agree upon.</span>
+			<span class="sentence" id="dol_1_15_zujc_1368">The space-time speed c that he deduces is therefore also a quantity that everyone can agree upon.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1369">So the speed through spacetime is a universal upon which everyone agrees.</span>
+			<span class="sentence" id="dol_1_15_zujc_1370">This newfound way of thinking about how things move through spacetime can help us get a different handle on why moving clocks run slow.</span>
+			<span class="sentence" id="dol_1_15_zujc_1371">In this spacetime way of thinking, a moving clock uses up some of its fixed quota of spacetime speed because of its motion through space and that leaves less for its motion through time.</span>
+			<span class="sentence" id="dol_1_15_zujc_1372">In other words, a moving clock doesn't move so fast through time as a stationary one, which is just another way of saying that it ticks more slowly.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1373">96</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1374">In contrast, a clock sitting at rest whizzes along in the time direction at the speed c with no motion through space.</span>
+			<span class="sentence" id="dol_1_15_zujc_1375">It therefore ticks along as fast as is possible.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1376">Armed with spacetime, we are ready to contemplate one of the wonderful puzzles of Special Relativity: the Twins Paradox.</span>
+			<span class="sentence" id="dol_1_15_zujc_1377">Earlier in the book we showed that Einstein's theory allows us to contemplate the possibility of traveling to distant places in the universe.</span>
+			<span class="sentence" id="dol_1_15_zujc_1378">Speeding within a whisker of the speed of light, we imagined journeying off to the Andromeda galaxy within a human lifetime regardless of the fact that it takes light nearly 3 million years to make the journey.</span>
+			<span class="sentence" id="dol_1_15_zujc_1379">There is a paradox lurking here that we previously glossed over.</span>
+			<span class="sentence" id="dol_1_15_zujc_1380">Imagine twins, one of whom trains to be an astronaut and heads off on humanity's first mission to Andromeda, leaving her twin back home on Earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1381">The astronaut twin is moving at high speed relative to the earth and consequently her life slows down relative to her twin on Earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1382">But we have just spent a significant fraction of this book arguing that there is no such thing as absolute motion.</span>
+			<span class="sentence" id="dol_1_15_zujc_1383">In other words, the answer to the question "Who is doing the moving?" is "Whoever you want."</span>
+			<span class="sentence" id="dol_1_15_zujc_1384">Anybody and everybody is free to decide that they are standing still, and the other guy is whizzing around the universe at high speed relative to them.</span>
+			<span class="sentence" id="dol_1_15_zujc_1385">And so it is for the astronaut twin, who is free to say that she is standing perfectly still in her space rocket, watching the earth fly away at high speed.</span>
+			<span class="sentence" id="dol_1_15_zujc_1386">For her, it is therefore the earthbound twin who ages more slowly.</span>
+			<span class="sentence" id="dol_1_15_zujc_1387">Who is right?</span>
+			<span class="sentence" id="dol_1_15_zujc_1388">Can it really be that each of the twins ages more slowly relative to the other?</span>
+			<span class="sentence" id="dol_1_15_zujc_1389">Well it has to be like that ï¿½ that is what the theory says.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1390">97</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1391">There is no paradox yet, because any problems you might be having in believing that each twin observes the other to be aging more slowly are not real problems.</span>
+			<span class="sentence" id="dol_1_15_zujc_1392">They are due to the fact that you are clinging to the idea of universal time.</span>
+			<span class="sentence" id="dol_1_15_zujc_1393">But time is not universal; that much we have learned, and that means there is no contradiction at all.</span>
+			<span class="sentence" id="dol_1_15_zujc_1394">Now comes the apparent paradox: What happens if the astronaut twin returns back to Earth sometime in the future and meets up with her earthbound twin?</span>
+			<span class="sentence" id="dol_1_15_zujc_1395">Obviously they cannot both be younger than the other.</span>
+			<span class="sentence" id="dol_1_15_zujc_1396">What is going on?</span>
+			<span class="sentence" id="dol_1_15_zujc_1397">Is one of them actually older than the other?</span>
+			<span class="sentence" id="dol_1_15_zujc_1398">If so, who?</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1399">The answer can be found in our understanding of spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1400">Let's imagine the paths through spacetime taken by the twins, as measured using clocks and rulers at rest relative to the earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1401">The earthbound twin stays on the earth and consequently her path snakes along the time axis.</span>
+			<span class="sentence" id="dol_1_15_zujc_1402">In other words, almost all of her allocated speed through spacetime is expended traveling through time.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1403">98</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1404">Her astronaut twin, on the other hand, heads off at close to light speed.</span>
+			<span class="sentence" id="dol_1_15_zujc_1405">Returning to the motorcyclist analogy, that means she charges off in a "northeasterly" direction, using up as much of her spacetime speed as she can to push through space at close to the cosmic speed limit.</span>
+			<span class="sentence" id="dol_1_15_zujc_1406">At some point, however, she needs to turn around and come back to the earth.</span>
+			<span class="sentence" id="dol_1_15_zujc_1407">We shall suppose that she heads back again at close to light speed but this time in a "northwesterly" direction.</span>
+			<span class="sentence" id="dol_1_15_zujc_1408">Obviously the twins take different paths through spacetime, even though they started and finished at the same point.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1409">Now just like distances in space, the length of two different paths in spacetime can be different.</span>
+			<span class="sentence" id="dol_1_15_zujc_1410">To reiterate, although everyone must agree on the length of any particular path through spacetime, the lengths of different paths need not be the same.</span>
+			<span class="sentence" id="dol_1_15_zujc_1411">This is really no different from saying that the distance from Chamonix to Courmayeur depends upon whether you went through the Mont Blanc tunnel or hiked over the Alps.</span>
+			<span class="sentence" id="dol_1_15_zujc_1412">Of course, walking over a mountain means you travel a longer distance than tunneling through it.</span>
+			<span class="sentence" id="dol_1_15_zujc_1413">In our discussion of the motorcyclist speeding over the spacetime landscape, we established that the time measured on the motorcyclist's wristwatch provides a direct way to measure the spacetime distance he traveled: we just need to multiply the elapsed time by c to get the spacetime distance.</span>
+			<span class="sentence" id="dol_1_15_zujc_1414">We can turn this statement on its head and say that once we know the spacetime distance traveled by each of the twins, then we can figure out the time that passes according to each.</span>
+			<span class="sentence" id="dol_1_15_zujc_1415">That is, we can think of each twin as a voyager through spacetime with their wristwatches measuring the spacetime distance that they travel.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1416">99</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1417">Now comes the key idea.</span>
+			<span class="sentence" id="dol_1_15_zujc_1418">Consider again at the formula for distances in spacetime, s<sup>2</sup>=(ct)<sup>2</sup> - x<sup>2</sup>.</span>
+			<span class="sentence" id="dol_1_15_zujc_1419">The spacetime distance is biggest if we can follow a path that has x = 0.</span>
+			<span class="sentence" id="dol_1_15_zujc_1420">Any other path must be shorter because we have to subtract the (always positive) x<sup>2</sup> contribution.</span>
+			<span class="sentence" id="dol_1_15_zujc_1421">But the earthbound twin snakes along the time direction with x close to zero, so her path must be the <i>longest possible path</i>.</span>
+			<span class="sentence" id="dol_1_15_zujc_1422">Actually, that is just another way of saying what we already know: that the earthbound twin is traveling as fast as possible through time and so it is she who ages the most.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1423">Our explanation so far has been presented from the viewpoint of the earthbound twin.</span>
+			<span class="sentence" id="dol_1_15_zujc_1424">To fully satisfy ourselves that there is no paradox, we should see how things look from the viewpoint of the astronaut twin.</span>
+			<span class="sentence" id="dol_1_15_zujc_1425">For her, the earthbound twin is the one doing the traveling while she snakes along her own time axis.</span>
+			<span class="sentence" id="dol_1_15_zujc_1426">It looks like the paradox is back again; since the astronaut twin is at rest relative to her spaceship, it seems that she should speed maximally through time and hence age the most.</span>
+			<span class="sentence" id="dol_1_15_zujc_1427">But there is a very subtle point here.</span>
+			<span class="sentence" id="dol_1_15_zujc_1428">The distance equation does <i>not</i> apply if we set out to use the astronaut twin's clocks and rulers to measure distances and times.</span>
+			<span class="sentence" id="dol_1_15_zujc_1429">More precisely, it fails when the astronaut twin undergoes the acceleration that turns the spaceship around.</span>
+			<span class="sentence" id="dol_1_15_zujc_1430">Why does it fail?</span>
+			<span class="sentence" id="dol_1_15_zujc_1431">The arguments we presented when we figured it out seemed pretty watertight.</span>
+			<span class="sentence" id="dol_1_15_zujc_1432">But if one uses an accelerating system of clocks and rulers to make measurements, as the astronaut twin must, then the assumption that spacetime is unchanging and the same everywhere that we used to write down the distance equation is wrong.</span>
+			<span class="sentence" id="dol_1_15_zujc_1433">Over the time of the acceleration, the astronaut twin will be pushed back into her seat, in much the same way that you are pushed back into your seat when you press the accelerator pedal on a car.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1434">100</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1435">For a start, that immediately picks out a special direction in space: the direction of the acceleration.</span>
+			<span class="sentence" id="dol_1_15_zujc_1436">The existence of that force must be accounted for in the distance equation, and that is where the loophole resides.</span>
+			<span class="sentence" id="dol_1_15_zujc_1437">It is a little too complicated for us to go into the mathematical details, but the upshot is that when the spaceship fires its rockets to turn around, the earthbound twin ages rapidly relative to the astronaut twin and that more than makes up for the fact that she ages more slowly during the nonaccelerating phases of the expedition.</span>
+			<span class="sentence" id="dol_1_15_zujc_1438">There is no paradox.</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1439">We can't resist quoting some numbers, because the effect can be startling.</span>
+			<span class="sentence" id="dol_1_15_zujc_1440">Space travel is most comfortable for those onboard the spaceship if the rockets are firing in order to sustain an acceleration equal to "one g."</span>
+			<span class="sentence" id="dol_1_15_zujc_1441">That means that the space travelers feel their own weight inside the rocket.</span>
+			<span class="sentence" id="dol_1_15_zujc_1442">So let's imagine a journey of 10 years at that acceleration, followed by 10 more years decelerating at the same rate, at which point we turn the spaceship around and head back to Earth, accelerating for 10 more years and decelerating for a further 10 before finally arriving back.</span>
+			<span class="sentence" id="dol_1_15_zujc_1443">In total the travelers onboard the spaceship will have been journeying for a total of 40 years.</span>
+			<span class="sentence" id="dol_1_15_zujc_1444">The question is how many years have passed on Earth?</span>
+			<span class="sentence" id="dol_1_15_zujc_1445">We'll just quote the result because the mathematics is (only a little) beyond the level of this book.</span>
+			<span class="sentence" id="dol_1_15_zujc_1446">The result is that a breathtaking 59,000 years will have passed on Earth!</span>
+		</p>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1447">This has been a remarkable journey, and we hope the listener has followed us into the world of spacetime.</span>
+			<span class="sentence" id="dol_1_15_zujc_1448">We are now ready to head directly to E = mc<sup>2</sup>.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1449">101</span>
+		<p>
+			<span class="sentence" id="dol_1_15_zujc_1450">Armed with spacetime and our invariant definition of distance, we ask a simple but very important question: Are there other invariant quantities that also describe the properties of real objects in the real world?</span>
+			<span class="sentence" id="dol_1_15_zujc_1451">Of course, distances aren't the only things that are important.</span>
+			<span class="sentence" id="dol_1_15_zujc_1452">Objects have mass, they can be hard or soft, hot or cold, solid, liquid, or gas.</span>
+			<span class="sentence" id="dol_1_15_zujc_1453">Since all objects live in spacetime, is it possible to describe everything about the world in an invariant way?</span>
+			<span class="sentence" id="dol_1_15_zujc_1454">We will discover in the next chapter that it is, and the consequences are profound, for this is the road that leads directly to E = mc<sup>2</sup>.</span>
+		</p><span class="page-normal" id="dol_1_15_zujc_1455">102</span><br/>
+		<span class="page-normal" id="dol_1_15_zujc_1456">103</span>
+	</body>
+</html>
