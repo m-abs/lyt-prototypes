@@ -18,21 +18,13 @@
   </button>
 </ion-toolbar>
 
-<div class="row">
-  
-</div>
-<ion-content class="getting-started">
-  
-  <ion-content padding class="home">
-    
-    <p ng-hide="{media != null}">
+<ion-content padding class="getting-started">
+    <span>
       <ion-icon name="ionic" style="font-size: 3em; vertical-align: middle; margin-right: 0.2em" primary></ion-icon>
       Played {{currentPosition}}s of {{duration}}s
-    </p>
+    </span>
     
-    <button (click)="obtainNetworkConnection()" full>Get Network Connection Type</button>
-  </ion-content>
-
+    <button (click)="obtainNetworkConnection()" full small>Get Network Connection Type</button>
 </ion-content>
 
 <ion-content class="webContainer">

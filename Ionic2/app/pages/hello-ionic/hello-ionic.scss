@@ -1,9 +1,10 @@
+
 .getting-started {
 
-  flex: 1;
-  display: flex;
+  flex: 0 0 auto;
   flex-direction: column;
-
+  height: 100px;
+  
   p {
     margin: 20px 0;
     line-height: 22px;
@@ -27,6 +28,8 @@ ion-content div.scroll {
 }
 
 .webPage {
+  flex: 1;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   border-top: 1px solid map-get($colors, primary);
@@ -34,10 +37,7 @@ ion-content div.scroll {
 }
 
 .webContainer {
-  flex: 1;
-  height: 100%;
-  flex-grow: 2;
-  display: flex;
+  flex: 2;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
 }

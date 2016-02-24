@@ -55,9 +55,9 @@ export class HelloIonicPage {
         // http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3
         //this.media = new Media('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3', function() { console.log('mediaSuccess') }, function() { console.log('mediaError') }, this.mediaStatusChange);
         this.media = new Media('/android_asset/www/mp3/thunder.mp3',
-          function() { console.log('mediaSuccess'); },
-          function(err) { console.log('mediaError', err); },
-          this.mediaStatusChange);
+          () => { console.log('mediaSuccess'); this.playPauseIcon = 'play'; },
+          (err) => { console.log('mediaError', err); },
+          (status) => { console.log('Status change: '+ status); });
         console.log(this.media.setRate(2));
         console.log('Created Media', this.media);
       }
@@ -79,6 +79,7 @@ export class HelloIonicPage {
       this.media.release();
       this.media = null;
       this.isPlaying = false;
+      this.playPauseIcon = 'play';
     }
   }
 
@@ -92,9 +93,5 @@ export class HelloIonicPage {
         }
       });
     }
-  }
-
-  mediaStatusChange(status) {
-      console.log('Status change: '+ status);
   }
 }
