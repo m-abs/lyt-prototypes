@@ -19,10 +19,6 @@ import React, {
   WebView,
 } from 'react-native';
 
-// import MainView from './src/main';
 import AudioView from './src/audioplayer';
-// import NavigatorExample from './src/NavigatorExample';
-// import SliderExample from './src/slider';
-// import WebViewExample from './src/webview';
 
 AppRegistry.registerComponent('ReactNativeProto2', () => AudioView);
